@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: { 
+  plugins: {
     'postcss-px-to-viewport': {
      		/** 视窗的宽度，对应的是我们设计稿的宽度，一般是750 */
       viewportWidth: 1920,
