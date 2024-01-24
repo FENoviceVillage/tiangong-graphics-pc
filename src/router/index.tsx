@@ -1,10 +1,24 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { Navigate, createBrowserRouter } from 'react-router-dom'
+import React from 'react'
+
+const About = React.lazy(() => import('../pages/About'))
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>Hello world!</div>,
+    element: <Navigate to="/home" />,
   },
+  {
+    path: '/home',
+    id: 'home',
+    element: <About />,
+  },
+  {
+    path: '/about',
+    id: 'about',
+    element: <About />,
+  },
+
 ])
 
 export default router
