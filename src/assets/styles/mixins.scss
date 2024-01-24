@@ -1,0 +1,292 @@
+@use "sass:math";
+
+/** 外边距 */
+@mixin m-t($px: $base-margin) {
+  margin-top: $px;
+}
+
+@mixin m-b($px: $base-margin) {
+  margin-bottom: $px;
+}
+
+@mixin m-l($px: $base-margin) {
+  margin-left: $px;
+}
+
+@mixin m-r($px: $base-margin) {
+  margin-right: $px;
+}
+
+/** 内边距 */
+@mixin p-t($px: $base-padding) {
+  padding-top: $px;
+}
+
+@mixin p-b($px: $base-padding) {
+  padding-bottom: $px;
+}
+
+@mixin p-l($px: $base-padding) {
+  padding-left: $px;
+}
+
+@mixin p-r($px: $base-padding) {
+  padding-right: $px;
+}
+
+/** 圆角 */
+@mixin border-radius($px: $base-border-radius) {
+  border-radius: $px;
+}
+
+@mixin border-line {
+  border: 1px solid #eff1f6;
+}
+
+/** 强调分割线 */
+@mixin line-bottom {
+  border-bottom: 1px solid #eff1f6;
+}
+
+@mixin line-top {
+  border-top: 1px solid #eff1f6;
+}
+
+@mixin line-right {
+  border-right: 1px solid #eff1f6;
+}
+
+@mixin line-left {
+  border-left: 1px solid #eff1f6;
+}
+
+/** 强调分割线pro */
+@mixin line-pro-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+}
+
+@mixin line-pro-top {
+  border-top: 1px solid rgba(0, 0, 0, 0.24);
+}
+
+/** 竖分隔符 */
+@mixin separator($px: $base-margin) {
+  width: 1px;
+  height: 24px;
+  margin: 0 $px;
+  background: $separator-color;
+}
+
+/** 文字多行溢出 */
+@mixin textrow($row: 2) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: $row;
+  /** autoprefixer   : off */
+  -webkit-box-orient: vertical;
+}
+
+/** 弹性布局 */
+@mixin flex($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-r {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-r-sa {
+  @include flex-r;
+  justify-content: space-around;
+}
+
+@mixin flex-r-sb {
+  @include flex-r;
+  justify-content: space-between;
+}
+
+@mixin flex-r-se {
+  @include flex-r;
+  justify-content: space-evenly;
+}
+
+@mixin flex-rc {
+  @include flex-r;
+  align-items: center;
+}
+
+@mixin flex-rc-c {
+  @include flex-rc;
+  justify-content: center;
+}
+
+@mixin flex-rc-sb {
+  @include flex-rc;
+  justify-content: space-between;
+}
+
+@mixin flex-rc-sa {
+  @include flex-rc;
+  justify-content: space-around;
+}
+
+@mixin flex-rc-fe {
+  @include flex-rc;
+  justify-content: flex-end;
+}
+
+@mixin flex-c {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-cc-c {
+  @include flex-c;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-c-sa {
+  @include flex-c;
+  justify-content: space-around;
+}
+
+@mixin flex-c-sb {
+  @include flex-c;
+  justify-content: space-between;
+}
+
+@mixin flex-c-se {
+  @include flex-c;
+  justify-content: space-evenly;
+}
+
+@mixin flex-c-fe {
+  @include flex-c;
+  justify-content: flex-end;
+}
+
+/** 阴影 */
+@mixin shadow($x: 0, $y: 0, $blur: 8px, $spread: 0, $color: $shadow-color) {
+  box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin text-justify {
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  content: ".";
+}
+
+@mixin titleLine($width: 2, $height: 100%) {
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $width * 1px;
+    height: 100%;
+    background: $primary-color;
+    content: "";
+  }
+}
+
+/** 基础盒模型 */
+@mixin wrap {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 $padding;
+  background: #fff;
+  @include flex-rc;
+}
+
+/** 文字超出显示省略号 */
+@mixin word-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/** flex布局换行 */
+@mixin flex-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/** 隐藏元素 */
+@mixin hide {
+  display: none;
+}
+
+/** 默认placeholder颜色 */
+@mixin placeholder($color: $text-fourth-color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: $color;
+  }
+  &::-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $color;
+  }
+}
+
+@mixin test {
+  width: 200px !important;
+  height: 200px !important;
+  background-color: red !important;
+}
+
+@mixin tab-title {
+  box-sizing: border-box;
+  height: 84px;
+  color: $text-color;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 44px;
+}
+
+@mixin ad {
+  width: 100%;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+@mixin area-safe-padding-bottom($px) {
+  @supports (bottom: env(safe-area-inset-bottom)) {
+    padding-bottom: calc($px / $base-width * 100vw + constant(safe-area-inset-bottom));
+    padding-bottom: calc($px / $base-width * 100vw + var(safe-area-inset-bottom));
+    padding-bottom: calc($px / $base-width * 100vw + env(safe-area-inset-bottom));
+  }
+}
+@mixin area-safe-margin-bottom($px) {
+  @supports (bottom: env(safe-area-inset-bottom)) {
+    margin-bottom: calc($px / $base-width * 100vw + constant(safe-area-inset-bottom));
+    margin-bottom: calc($px / $base-width * 100vw + var(safe-area-inset-bottom));
+    margin-bottom: calc($px / $base-width * 100vw + env(safe-area-inset-bottom));
+  }
+}
+@mixin area-safe-height($px) {
+  @supports (bottom: env(safe-area-inset-bottom)) {
+    height: calc($px / $base-width * 100vw + constant(safe-area-inset-bottom));
+    height: calc($px / $base-width * 100vw + var(safe-area-inset-bottom));
+    height: calc($px / $base-width * 100vw + env(safe-area-inset-bottom));
+  }
+}
+
+@mixin area-safe-bottom($px) {
+  @supports (bottom: env(safe-area-inset-bottom)) {
+    bottom: calc($px / $base-width * 100vw + constant(safe-area-inset-bottom));
+    bottom: calc($px / $base-width * 100vw + var(safe-area-inset-bottom));
+    bottom: calc($px / $base-width * 100vw + env(safe-area-inset-bottom));
+  }
+}

@@ -1,0 +1,134 @@
+/* 图标箭头颜色 */
+.arrow-color {
+  color: $arrow-color;
+}
+
+/** 清除浮动 */
+.clearfix::after {
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  content: "";
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+/** 隐藏元素 */
+.hide {
+  display: none !important;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+/** 列表页没有更多数据 */
+.list-data-notmore {
+  position: relative;
+  color: #7f7e7e;
+  font-size: 28px;
+  line-height: 70px;
+  text-align: center;
+}
+
+/** 统计字数组件样式 */
+.words-total-box {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  color: #333;
+  font-size: 26px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-view-height {
+  height: 100vh;
+}
+
+/** ----- 还可以扩展很多类，方便书写样式，无需重新定义类名,例如flex-row、align-center ----- */
+$margin-padding-type: (
+  ma: margin,
+  mt: margin-top,
+  mr: margin-right,
+  mb: margin-bottom,
+  ml: margin-left,
+  pa: padding,
+  pt: padding-top,
+  pr: padding-right,
+  pb: padding-bottom,
+  pl: padding-left,
+);
+/** 外边距-内边距-从8px开始，递增2px */
+@for $m from 0 through 20 {
+  @each $t, $attr in $margin-padding-type {
+    .#{$t}-#{$m*2 + 8} {
+      #{$attr}: #{($m * 2px) + 8px};
+    }
+  }
+}
+/** 外边距-内边距为none */
+@each $t, $attr in $margin-padding-type {
+  .#{$t}-none {
+    #{$attr}: 0 !important;
+  }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-warn {
+  color: $warn-color;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+.text-pro {
+  color: $pro-color;
+}
+
+.touch-feed-back {
+  opacity: 0.6;
+}
+
+.touch-feed-back-disabled {
+  opacity: 0.6;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+a:hover {
+  color: #000;
+}
+
+.border-none {
+  border: none;
+}
