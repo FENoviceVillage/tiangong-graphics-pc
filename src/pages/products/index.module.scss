@@ -1,0 +1,8 @@
+@import '../../assets/styles/mixins.scss';
+.content{
+  
+}
+.TrialForms{
+  @include flex-cc-c;
+  background-color: #E3F6FE;
+}
