@@ -124,7 +124,6 @@ function Index() {
           <input type="text" placeholder="联系电话" />
           <input type="text" placeholder="公司名称" />
           <input type="email" placeholder="Email地址" />
-          {/* <input type="text"  placeholder="" /> */}
           <textarea className={styles['full-row']} placeholder="内容描述：3D类产品使用经验、业务场景、面临的挑战、业务商业价值等"></textarea>
           <div className={styles.footerText}>若您需要帮助的话请告诉我们，让我们更好的去做到最好而不是做得更好010-00000000. 感谢！</div>
           <button>提交</button>
