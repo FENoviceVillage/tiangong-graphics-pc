@@ -4,7 +4,9 @@ import router from '../../router'
 
 function PageBody() {
   return (
-    <Outlet />
+    <body>
+      <Outlet />
+    </body>
   )
 }
 

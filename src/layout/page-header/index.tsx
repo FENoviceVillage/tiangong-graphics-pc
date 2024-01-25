@@ -5,7 +5,7 @@ import Logo from '@/assets/imgs/tiangong-logo.png'
 
 function PageHeader() {
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <img className={styles.headerLogo} src={Logo} />
       <div className={styles.headerTab}>
         <NavLink to="/home" className={({ isActive }) => isActive ? styles.headerTabActive : ''}>  首页 </NavLink>
@@ -16,7 +16,7 @@ function PageHeader() {
         <NavLink to="/dynamic" className={({ isActive }) => isActive ? styles.headerTabActive : ''}>动态</NavLink>
         <NavLink to="/join" className={({ isActive }) => isActive ? styles.headerTabActive : ''}>加入我们</NavLink>
       </div>
-    </div>
+    </header>
   )
 }
 
