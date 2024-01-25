@@ -1,0 +1,101 @@
+.main {
+  padding: 18px 14px;
+  width: 706px;
+  height: 742px;
+  background: gray;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 12px;
+  font-family: Source Han Sans SC;
+  font-weight: 400;
+  color: #666666;
+  line-height: 20px;
+
+  .top {
+    width: 100%;
+    position: relative;
+
+    height: 200px;
+    background: #0CAEDF;
+    padding-top: 48px;
+    padding-left: 41px;
+    box-sizing: border-box;
+
+    img {
+      height: 37px;
+      position: absolute;
+      right: 33px;
+      top: 10px
+    }
+
+    .h1 {
+      font-size: 36px;
+      font-family: Source Han Sans SC;
+      font-weight: 500;
+      color: #FFFFFF;
+      line-height: 28px;
+      padding-bottom: 18px;
+    }
+
+    .h2 {
+      font-size: 24px;
+      font-family: Source Han Sans SC;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 28px;
+    }
+  }
+
+  .footer {
+    width: 100%;
+
+    height: 506px;
+    background: #FAFAFA;
+  }
+
+  .content {
+    position: absolute;
+    top: 153px;
+    margin: 0 12px;
+    width: 655px;
+    height: 349px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    padding: 22px 14px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+
+    .border {
+      background-image: url('../../../../assets/imgs/quote/工业级3D文字底宽.png');
+      width: 295px;
+      height: 188px;
+      background-size: cover;
+      padding: 0 2px;
+    }
+
+    .noBorder {
+      // display: flex;
+      margin-top: 34px;
+
+      width: 295px;
+
+    }
+
+    footer {
+      margin-top: 35px;
+      width: 632px;
+      height: 105px;
+      background: #FFFFFF;
+      border: 1px solid #BFBFBF;
+      font-family: Source Han Sans SC;
+      font-weight: 400;
+      color: #1A1A1A;
+      line-height: 18px;
+      padding: 20px 0 0 25px;
+      box-shadow: 5px 5px 0px #E7D3C2;
+    }
+  }
+}

@@ -2,6 +2,7 @@ import { Navigate, createBrowserRouter } from 'react-router-dom'
 import React from 'react'
 
 const About = React.lazy(() => import('../pages/About'))
+const Quote = React.lazy(() => import('../pages/quote'))
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
     path: '/about',
     id: 'about',
     element: <About />,
+  },
+  {
+    path: '/quote',
+    id: 'quote',
+    element: <Quote />,
   },
 
 ])
