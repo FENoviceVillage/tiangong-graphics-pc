@@ -7,7 +7,7 @@ import ExpericeForm from './components/experienceForm'
 function Products() {
   return (
     <div className={style.content}>
-      <div>
+      <div className={style.topShow}>
         <h2>工业3d模型解析平台</h2>
         <span>网页上直接浏览3d模型，尺寸测量、3D标注、特征识别、制造成本分析</span>
         <div className={style.button}>

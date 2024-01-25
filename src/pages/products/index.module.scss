@@ -1,6 +1,20 @@
 @import '../../assets/styles/mixins.scss';
-.content{
-  
+.topShow{
+  @include flex-cc-c;
+  >h2{
+    font-size: 68px;
+    font-weight: 600;
+    color: #397393;
+  }
+  >span{
+    font-size: 20px;
+  }
+  >.button{
+    padding: 70px;
+    >button{
+      background: linear-gradient(90deg, #80D0E8 0%, #86B3EC 100%);
+    }
+  }
 }
 .TrialForms{
   @include flex-cc-c;
