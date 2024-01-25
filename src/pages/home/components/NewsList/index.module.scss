@@ -1,0 +1,48 @@
+.box {
+    width: 428px;
+    height: 525px;
+    box-sizing: border-box;
+    .imgs{
+        height: 263px;
+        border: solid silver 1px;
+    }
+    .textBox {
+        text-align: center;
+        .time {
+            padding-top: 55px;
+            height: 19px;
+            font-size: 24px;
+            font-family: Source Han Sans SC;
+            font-weight: 500;
+            color: #054B72;
+            line-height: 28px;
+        }
+
+        .text {
+            text-align: left;
+            padding: 35px 36px 36px 36px;
+            height: 44px;
+            font-size: 16px;
+            font-family: Source Han Sans SC;
+            font-weight: 500;
+            color: #054B72;
+            line-height: 28px;
+        }
+
+        .detail {
+            all:unset;
+            width: 131px;
+            border: 0;
+            border-top: solid #054B72 1px;
+            border-bottom: solid #054B72 1px;
+            .flexbox{
+                padding-top:12px ;
+                padding-bottom: 12px;
+                display: flex;
+                gap: 24px;
+                justify-content:center;
+                align-items: center;
+            }
+        }
+    }
+}
