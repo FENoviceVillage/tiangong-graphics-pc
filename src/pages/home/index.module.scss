@@ -394,10 +394,9 @@
 
         /* 占位符样式 */
         .form-container input::placeholder,
-        textarea::placeholder,
-        {
-        color: #FFFFFF;
-        /* 占位符颜色 */
+        textarea::placeholder {
+            color: #FFFFFF;
+        }
+
     }
-}
 }
