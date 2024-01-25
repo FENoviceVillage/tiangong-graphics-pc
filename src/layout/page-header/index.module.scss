@@ -1,4 +1,33 @@
 .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left:360px;
+  padding-right: 415px;
   height: 90px;
-  background-color: blue;
+
+  &Logo {
+    width: 234px;
+    height: 57px;
+    margin-right: 233px;
+  }
+  
+  &Tab {
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    > a {
+      color:#494949 ;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    &Active  {
+      color:#361E5E !important;
+      text-decoration: underline;
+    } 
+  }
 }
