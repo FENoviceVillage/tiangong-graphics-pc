@@ -1,22 +1,111 @@
-@import '../../assets/styles/mixins.scss';
-.topShow{
+@import "../../assets/styles/mixins.scss";
+.topShow {
+  background: #41e125;
   @include flex-cc-c;
-  >h2{
+  > h2 {
     font-size: 68px;
     font-weight: 600;
     color: #397393;
   }
-  >span{
+  > span {
     font-size: 20px;
   }
-  >.button{
+  .video {
+    background: #fff;
+    width: 1200px;
+    height: 600px;
+    padding: 10px;
+    border: 3px #968389 dashed;
+    > video {
+      background: #86b3ec;
+      width: 1200px;
+      height: 600px;
+    }
+  }
+  .videoDetail {
+    margin: 40px;
+    > p {
+      font-size: 36px;
+      > span {
+        color: #1b4b65;
+      }
+    }
+  }
+  .topLine {
+    @include flex-rc-sa;
+    height: 150px;
+    width: 1200px;
+    border-top: 2px solid #1b4b65;
+    border-bottom: 2px solid #1b4b65;
+    > p {
+      font-size: 30px;
+      font-weight: 600;
+      margin-right: 60px;
+    }
+    > a {
+      text-decoration: underline;
+    }
+  }
+  .interactButton {
+    width: 600px;
+    @include flex-rc-sb;
     padding: 70px;
-    >button{
-      background: linear-gradient(90deg, #80D0E8 0%, #86B3EC 100%);
+    > button {
+      border: 0;
+      color: #fff;
+      width: 221px;
+      height: 45px;
+      background: linear-gradient(90deg, #80d0e8 0%, #86b3ec 100%);
     }
   }
 }
-.TrialForms{
+.parse {
+  background: #968389;
   @include flex-cc-c;
-  background-color: #E3F6FE;
+  height: 40vh;
+  > h1 {
+    font-size: 44px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #000000;
+    line-height: 72px;
+  }
+  >p{
+    font-size: 28px;
+    color: #5c5c5c;
+    >span{
+      color: #054B72;
+    }
+  }
+  :last-child{
+    color: #054B72;
+  }
+}
+.palyFree{
+  background: #d05959;
+  height: 140vh;
+  @include flex-cc-c;
+  .paidContent{
+    @include flex-r;
+    .interact{
+      margin: 100px 50px 0 0;
+      .crowd{
+        font-size: 43px;
+        font-family: Source Han Sans SC;
+        font-weight: 800;
+        color: #397393;
+        text-shadow: 0px 6px 5px rgba(133,133,159,0.35);
+        margin-bottom: 30px;
+      }
+    }
+    .PaidForms{
+      background: #41e125;
+      width: 800px;
+      height: 1000px;
+    }
+  }
+}
+.TrialForms {
+  @include flex-cc-c;
+  background-color: #e3f6fe;
 }
