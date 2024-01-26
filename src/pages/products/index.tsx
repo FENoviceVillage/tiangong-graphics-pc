@@ -2,7 +2,6 @@ import React from 'react'
 import style from './index.module.scss'
 import FeaturesCard from './components/featurescard'
 import FeaturesTitle from './components/featuresTitle'
-import ExpericeForm from './components/experienceForm'
 
 function Products() {
   return (
@@ -38,12 +37,15 @@ function Products() {
           <a href="">查看格式清单</a>
         </div>
       </div>
-      <div>
+      <div className={style.feature}>
         <FeaturesTitle />
         <p>工业3D模型解析平台提供了API接口，实现客户快速的在线浏览3d模型、测量、3D标注、特征识别、制造成本分析等功能</p>
-        <FeaturesCard />
-      </div>
-      <div>
+        <div className={style.featureCard}>
+          <FeaturesCard />
+          <FeaturesCard />
+          <FeaturesCard />
+          <FeaturesCard />
+        </div>
         <FeaturesTitle />
         <p>工业3D模型解析平台提供了API接口，实现客户快速的在线浏览3d模型、测量、3D标注、特征识别、制造成本分析等功能</p>
         <FeaturesCard />
@@ -100,7 +102,7 @@ function Products() {
             <div>
               <div className={style.attribute}>
                 <div className={style.attributeTitle}>
-                  格式支持
+                  格式支持1212
                 </div>
                 <div className={style.attributeBody}>
                   <div>
@@ -116,21 +118,6 @@ function Products() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className={style.footer}>
-        <div className={style.title}>申请试用</div>
-        <div className={style.titleBar}>
-          <div className={style.bar}></div>
-        </div>
-        <div className={style['form-container']}>
-          <input type="text" placeholder="姓名" />
-          <input type="text" placeholder="联系电话" />
-          <input type="text" placeholder="公司名称" />
-          <input type="email" placeholder="Email地址" />
-          <textarea className={style['full-row']} placeholder="内容描述：3D类产品使用经验、业务场景、面临的挑战、业务商业价值等"></textarea>
-          <div className={style.footerText}>若您需要帮助的话请告诉我们，让我们更好的去做到最好而不是做得更好010-00000000. 感谢！</div>
-          <button>提交</button>
         </div>
       </div>
     </div>
