@@ -97,8 +97,20 @@ function Products() {
           </div>
         </div>
       </div>
-      <div className={style.TrialForms}>
-        <ExpericeForm />
+      <div className={style.footer}>
+        <div className={style.title}>申请试用</div>
+        <div className={style.titleBar}>
+          <div className={style.bar}></div>
+        </div>
+        <div className={style['form-container']}>
+          <input type="text" placeholder="姓名" />
+          <input type="text" placeholder="联系电话" />
+          <input type="text" placeholder="公司名称" />
+          <input type="email" placeholder="Email地址" />
+          <textarea className={style['full-row']} placeholder="内容描述：3D类产品使用经验、业务场景、面临的挑战、业务商业价值等"></textarea>
+          <div className={style.footerText}>若您需要帮助的话请告诉我们，让我们更好的去做到最好而不是做得更好010-00000000. 感谢！</div>
+          <button>提交</button>
+        </div>
       </div>
     </div>
   )

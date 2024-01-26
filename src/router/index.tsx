@@ -22,9 +22,9 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        id: '/about',
-        path: '/about',
-        element: <About />,
+        id: '/products',
+        path: '/products',
+        element: <Products />,
       },
       {
         id: '/api',
@@ -36,11 +36,7 @@ const router = createBrowserRouter([
         path: '/price',
         element: <About />,
       },
-      {
-        id: '/products',
-        path: '/products',
-        element: <Products />,
-      },
+
       {
         id: '/dynamic',
         path: '/dynamic',
@@ -49,6 +45,11 @@ const router = createBrowserRouter([
       {
         id: '/join',
         path: '/join',
+        element: <About />,
+      },
+      {
+        id: '/about',
+        path: '/about',
         element: <About />,
       },
     ],
