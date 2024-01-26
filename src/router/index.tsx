@@ -2,9 +2,9 @@ import React, { lazy } from 'react'
 import { Navigate, createBrowserRouter } from 'react-router-dom'
 import App from '../App'
 
-const About = lazy(() => import('../pages/About'))
-const Home = lazy(() => import('../pages/home'))
-const Dynamic = lazy(() => import('../pages/dynamic'))
+const About = lazy(() => import('@/pages/About/index'))
+const Home = lazy(() => import('@/pages/home/index'))
+const Dynamic = lazy(() => import('@/pages/dynamic/index'))
 
 const router = createBrowserRouter([
   {
@@ -52,6 +52,11 @@ const router = createBrowserRouter([
         element: <About />,
       },
     ],
+
+  },
+  {
+    path: '*',
+    element: <Navigate to="/home" />,
   },
 ])
 
