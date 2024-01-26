@@ -1,4 +1,5 @@
 import React from 'react'
+import { Pagination } from 'antd'
 import styles from './index.module.scss'
 
 interface Props {
@@ -12,7 +13,14 @@ function DynamicTable(props: Props) {
         <div className={styles.tableHeaderTitle}>{title}</div>
         <div className={styles.tableHeaderDecoration}></div>
       </div>
-      <div className={styles.tableBody}></div>
+      <div className={styles.tableBody}>
+        <div className={styles.tableBodyContent}>
+
+        </div>
+        <div className={styles.tableBodyPagination}>
+          <Pagination defaultCurrent={1} total={50} />
+        </div>
+      </div>
     </div>
   )
 }
