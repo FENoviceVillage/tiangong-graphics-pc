@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './index.module.scss'
-import RelationsImg from '@/assets/imgs/tiangong-relations.png'
-import SymbolImg from '@/assets/imgs/tiangong-symbol.png'
+import RelationsImg from '@/assets/img/footer/tiangong-relations.png'
+import SymbolImg from '@/assets/img/footer/tiangong-symbol.png'
 
 function PageFooter() {
   return (
