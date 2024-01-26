@@ -1,0 +1,60 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 23px;
+  border-bottom: 3px solid #7d8d96;
+
+  &Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &Title {
+      width: 425px;
+      font-size: 14px;
+      color: #397393;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-bottom: 9px;
+    }
+
+    &Article {
+      width: 468px;
+      height: 60px;
+      font-size: 14px;
+      color: #000000;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      margin-bottom: 27px;
+    }
+
+    &Time {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &Icon {
+        width: 11px;
+        height: 11px;
+        margin-right: 2px;
+      }
+
+      &Desc {
+        font-size: 12px;
+        color: #b7b5b4;
+        line-height: 17px;
+      }
+    }
+  }
+
+  &Img {
+    width: 175px;
+    height: 121px;
+  }
+}
