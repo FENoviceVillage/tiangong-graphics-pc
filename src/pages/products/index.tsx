@@ -73,9 +73,9 @@ function Products() {
               <h3>我是企业</h3>
               <p>
                 免费试用10次，按需选配
-                按次计费，买多省多
               </p>
-              <div>
+              <p>按次计费，买多省多</p>
+              <div className={style.request}>
                 <button>申请试用</button>
                 <button>申请购买</button>
               </div>
@@ -84,16 +84,37 @@ function Products() {
               <h3>我是个人</h3>
               <p>
                 免费试用10次，按需选配
-                按次计费，买多省多
               </p>
-              <div>
+              <p>按次计费，买多省多</p>
+              <div className={style.request}>
                 <button>申请试用</button>
                 <button>申请购买</button>
               </div>
             </div>
           </div>
           <div className={style.PaidForms}>
-            1212
+            <div className={style.tab}>
+              <div className={`${style.tabEnterprise} ${style.tabUsually}`}>企业版</div>
+              <div className={`${style.tabPersonal} ${style.tabUsually}`}>个人版</div>
+            </div>
+            <div>
+              <div className={style.attribute}>
+                <div className={style.attributeTitle}>
+                  格式支持
+                </div>
+                <div className={style.attributeBody}>
+                  <div>
+                    主流3D格式
+                  </div>
+                  <div>
+                    主流3D格式
+                  </div>
+                  <div>
+                    主流3D格式
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
