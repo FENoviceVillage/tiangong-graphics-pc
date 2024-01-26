@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './index.module.scss'
-import RelationsImg from '@/assets/img/footer/tiangong-relations.png'
 import SymbolImg from '@/assets/img/footer/tiangong-symbol.png'
+import PublicAccount from '@/assets/img/contactUs/tiangong-public-account.png'
 
 function PageFooter() {
   return (
@@ -17,7 +17,7 @@ function PageFooter() {
           <div className={styles.bodyCenterBox}>地址: xxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
         </div>
         <div className={styles.bodyRight}>
-          <img src={RelationsImg} className={styles.bodyRightImg} />
+          <img src={PublicAccount} className={styles.bodyRightImg} />
         </div>
       </div>
       <div className={styles.footer}>
