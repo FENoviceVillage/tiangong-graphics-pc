@@ -42,6 +42,9 @@
     "json",
     "jsonc",
     "yaml",
-    "toml"
+    "toml",
+    "scss",
+    "css",
+    "less"
   ]
 }

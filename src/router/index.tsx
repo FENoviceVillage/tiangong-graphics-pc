@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import { Navigate, createBrowserRouter } from 'react-router-dom'
 import App from '../App'
 
-const About = React.lazy(() => import('../pages/About'))
-const Home = React.lazy(() => import('../pages/home'))
+const About = lazy(() => import('../pages/About'))
+const Home = lazy(() => import('../pages/home'))
+const Dynamic = lazy(() => import('../pages/dynamic'))
 
 const router = createBrowserRouter([
   {
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
       {
         id: '/dynamic',
         path: '/dynamic',
-        element: <About />,
+        element: <Dynamic />,
       },
       {
         id: '/join',
