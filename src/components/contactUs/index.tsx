@@ -1,11 +1,17 @@
 import React from 'react'
+import classNames from 'classnames'
 import styles from './index.module.scss'
 import PublicAccount from '@/assets/img/contactUs/tiangong-public-account.png'
 import ServiceAccount from '@/assets/img/contactUs/tiangong-service-account.png'
 
-function ContactUs() {
+interface Props {
+  containerClassName?: string
+}
+function ContactUs(props: Props) {
+  const { containerClassName } = props
+
   return (
-    <div className={styles.contact}>
+    <div className={classNames([styles.contact, containerClassName])}>
       <div className={styles.contactTitle}>联系我们</div>
       <div className={styles.contactInfo}>
         <div className={styles.contactInfoEmail}>

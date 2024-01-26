@@ -4,22 +4,32 @@
   background-color: #fff;
   padding: 20px 16px;
   article {
-    background-color: #FAFAFA;
-
+    background-color: #fafafa;
   }
 }
+
 .layout {
   display: flex;
   justify-content: center;
-  background-color: #F3F6F9;
+  background-color: #f3f6f9;
   .center {
     display: flex;
   }
 }
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 12px 14px;
+
+  .contact {
+    background-color: #ffffff;
+    border: 2px solid #e2e7ee;
+  }
+}
+
 .relatedProducts {
-  margin-left: 14px;
-  margin-top: 14px;
-  margin-bottom: 14px;
   width: 212px;
   height: 129px;
   background: #ffffff;
