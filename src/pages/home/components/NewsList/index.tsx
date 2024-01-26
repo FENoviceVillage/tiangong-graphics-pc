@@ -5,7 +5,7 @@ export default function Index(props: { style?: any }) {
   const { style } = props
   return (
     <div className={styles.box} style={style}>
-      <div className={styles.imgs}></div>
+      <div className={styles.img}></div>
 
       <div className={styles.textBox}>
         <div className={styles.time}>

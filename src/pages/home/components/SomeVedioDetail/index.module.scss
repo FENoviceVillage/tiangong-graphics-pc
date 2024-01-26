@@ -1,22 +1,21 @@
 .box {
+  .top {
+    width: 280px;
+    height: 158px;
+    background: #cce8f4;
+    box-shadow: 0px 4px 5px 0px rgba(133, 133, 159, 0.35);
+    margin-bottom: 15px;
+  }
 
-    .top {
-        width: 280px;
-        height: 158px;
-        background: #CCE8F4;
-        box-shadow: 0px 4px 5px 0px rgba(133,133,159,0.35);
-        margin-bottom: 15px;
-    }
-
-    .bottom {
-        text-align: left;
-        padding-right: 38px;
-        width: 242px;
-        height: 33px;
-        font-size: 12px;
-        font-family: Source Han Sans SC;
-        font-weight: 500;
-        color: #717171;
-        line-height: 20px;
-    }
+  .bottom {
+    text-align: left;
+    padding-right: 38px;
+    width: 242px;
+    height: 33px;
+    font-size: 12px;
+    font-family: Source Han Sans SC;
+    font-weight: 500;
+    color: #717171;
+    line-height: 20px;
+  }
 }

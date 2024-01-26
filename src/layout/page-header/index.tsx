@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './index.module.scss'
-import Logo from '@/assets/imgs/tiangong-logo.png'
+import Logo from '@/assets/img/header/tiangong-logo.png'
 
 function PageHeader() {
   return (

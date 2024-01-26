@@ -1,0 +1,22 @@
+.banner {
+  width: 1920px;
+  height: 910px;
+  background-image: url('../../assets/img/dynamic/tiangong-dynamic-banner.png');
+  background-size: 1920px 910px;
+  padding: 366px 894px 437px 323px;
+
+  &Title {
+    font-size: 32px;
+    line-height: 62px;
+    color: #333333;
+  }
+
+  &Desc {
+    font-size: 18px;
+    color: #333333;
+  }
+}
+
+.body {
+  height: 2088px;
+}
