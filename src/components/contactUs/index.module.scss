@@ -1,0 +1,85 @@
+.contact {
+  width: 212px;
+  border-radius: 5px;
+  padding: 12px 15px 21px 17px;
+  border: 1px solid #397393;
+
+  &Title {
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 16px;
+    font-size: 15px;
+    color: #333333;
+    margin-bottom: 20px;
+
+    &::before {
+      display: inline-block;
+      content: '';
+      width: 5px;
+      height: 15px;
+      margin-right: 11px;
+      background: #397393;
+    }
+  }
+
+  &Info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 178px;
+    height: 56px;
+    margin-bottom: 26px;
+    font-size: 14px;
+    color: #333333;
+
+    &Email {
+      display: flex;
+      flex-direction: row;
+
+      &Desc {
+        flex-shrink: 0;
+        width: 42px;
+      }
+
+      &Value {
+        flex: 1;
+        overflow: hidden;
+        word-wrap: break-word;
+      }
+    }
+  }
+
+  &Code {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+
+    &Item {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+
+      &Wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 87px;
+        height: 86px;
+        border: 1px solid #397393;
+
+        &Img {
+          width: 81px;
+          height: 81px;
+        }
+      }
+
+      &Desc {
+        height: 12px;
+        font-size: 11px;
+        color: #333333;
+        text-align: center;
+      }
+    }
+  }
+}
