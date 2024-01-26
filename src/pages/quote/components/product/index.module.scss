@@ -1,0 +1,35 @@
+.product {
+  font-size: 12px;
+  font-family: Source Han Sans SC;
+  font-weight: 400;
+  color: #333333;
+  line-height: 28px;
+  padding-left: 20px;
+
+  .title {
+    font-size: 14px;
+    font-family: Source Han Sans SC;
+    font-weight: 400;
+    color: #E94F2C;
+    line-height: 28px;
+  }
+
+  .nodes {
+    display: flex;
+    flex-wrap: wrap;
+
+    .node {
+      display: flex;
+      width: 50%;
+    }
+
+    .explain {
+      font-size: 9px;
+      font-family: Source Han Sans SC;
+      font-weight: 400;
+      color: #333333;
+      line-height: 28px;
+    }
+  }
+
+}

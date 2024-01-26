@@ -1,0 +1,53 @@
+.main {
+  background-color: #F2F7FA;
+  @mixin center_c() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  @mixin center_p() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 12px;
+
+  .layout {
+    display: flex;
+  }
+  .bg {
+    background-color: #fff;
+
+    padding:0 16px;
+    main {
+      width: 724px;
+      padding: 0 16px;
+      background: #fafafa;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      header {
+        @include center_p();
+        flex-direction: column;
+        padding: 64px 0;
+        article {
+          font-size: 33px;
+          font-family: PangMenZhengDao;
+          font-weight: 400;
+          color: #8a8a8a;
+          line-height: 14px;
+          text-shadow: 0px 4px 5px rgba(133, 133, 159, 0.35);
+          transform: translate(0, -20px);
+        }
+      }
+    }
+  }
+
+}

@@ -4,6 +4,8 @@ import App from '../App'
 
 const About = lazy(() => import('@/pages/About/index'))
 const Home = lazy(() => import('@/pages/home/index'))
+const Quote = React.lazy(() => import('../pages/quote'))
+const Instructions = React.lazy(() => import('../pages/instructions'))
 const Dynamic = lazy(() => import('@/pages/dynamic/index'))
 
 const router = createBrowserRouter([
@@ -32,14 +34,9 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        id: '/price',
-        path: '/price',
-        element: <About />,
-      },
-      {
-        id: '/instruction',
-        path: '/instruction',
-        element: <About />,
+        id: '/quote',
+        path: '/quote',
+        element: <Quote />,
       },
       {
         id: '/dynamic',
@@ -50,6 +47,10 @@ const router = createBrowserRouter([
         id: '/join',
         path: '/join',
         element: <About />,
+      },
+      {
+        path: '/instructions',
+        element: <Instructions />,
       },
     ],
 
