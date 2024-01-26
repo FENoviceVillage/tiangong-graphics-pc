@@ -1,0 +1,22 @@
+@import '../../../../assets/styles/mixins.scss';
+.tryout{
+  @include flex-cc-c;
+  >h2{
+    margin-bottom: 10px;
+  }
+  .hr{
+    width: 184px;
+    height: 4px;
+    margin-bottom: 40px;
+    background-color: #C1D9E7;
+    box-shadow: 3px 6px 0 #EEEEEE;
+  }
+}
+p{
+  font-size: 14px;
+  color: #5F5F5F;
+  >a{
+    color: #78B1CC;
+  }
+}
+

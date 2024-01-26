@@ -1,8 +1,9 @@
 import React, { lazy } from 'react'
 import { Navigate, createBrowserRouter } from 'react-router-dom'
 import App from '../App'
+import Products from '@/pages/products'
 
-const About = lazy(() => import('@/pages/About/index'))
+const About = lazy(() => import('@/pages/about/index'))
 const Home = lazy(() => import('@/pages/home/index'))
 const Quote = React.lazy(() => import('../pages/quote'))
 const Instructions = React.lazy(() => import('../pages/instructions'))
@@ -24,9 +25,9 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        id: '/about',
-        path: '/about',
-        element: <About />,
+        id: '/products',
+        path: '/products',
+        element: <Products />,
       },
       {
         id: '/api',
@@ -49,6 +50,12 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
+        id: '/about',
+        path: '/about',
+        element: <About />,
+      },
+      {
+        id: '/instructions',
         path: '/instructions',
         element: <Instructions />,
       },

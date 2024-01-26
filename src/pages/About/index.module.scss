@@ -1,19 +1,80 @@
 .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  box-sizing: border-box;
   align-items: center;
-  ::after {
+  .index {
+    height: 92vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/img/products/about1@2x.png);
+    background-size: cover;
+    .subheading {
+      font-size: 22px;
+      color: #397393;
+      > h3 {
+        font-size: 42px;
+        letter-spacing: 5px;
+        // font-family: PangMenZhengDao;
+        font-weight: 400;
+        color: #397393;
+        margin-bottom: 30px;
+      }
+      > p {
+        font-size: 24px;
+        color: #6b92ab;
+      }
+    }
   }
-  > h3 {
-    font-size: 68px;
-    // font-family: PangMenZhengDao;
-    font-weight: 400;
-    color: #397393;
-    margin-bottom: 30px;
-  }
-  .subheading {
-    font-size: 22px;
-    color: #397393;
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #e1e0e3;
+    height: 120vh;
+    width: 100%;
+    .products {
+      width: 70%;
+      color: #333;
+      > h1 {
+        font-weight: 600;
+        color: #397393;
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      .productsDetails {
+        :nth-child(2n + 1) {
+          margin: 10px 0;
+          font-weight: 600;
+        }
+      }
+    }
+    .about {
+      margin-top: 50px;
+      width: 70%;
+      color: #333;
+      > h1 {
+        font-weight: 600;
+        color: #397393;
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      :nth-child(3) {
+        font-weight: 600;
+      }
+    }
+    .contact {
+      margin-top: 50px;
+      width: 70%;
+      color: #333;
+      > h1 {
+        font-weight: 600;
+        color: #397393;
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+    }
   }
 }
