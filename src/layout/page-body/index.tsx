@@ -1,12 +1,11 @@
-import React from 'react'
-import { Outlet, RouterProvider } from 'react-router-dom'
-import router from '../../router'
+import { Suspense } from 'react'
+import { Outlet } from 'react-router-dom'
 
 function PageBody() {
   return (
-    <body>
+    <Suspense>
       <Outlet />
-    </body>
+    </Suspense>
   )
 }
 
