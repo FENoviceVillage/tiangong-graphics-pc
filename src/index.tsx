@@ -1,13 +1,11 @@
-import React, { Suspense } from 'react'
-import ReactDOM from 'react-dom/client'
 import '@/index.css'
+import ReactDOM from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
 import router from '@/router'
+import '@/api/index.ts'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 )
 
-root.render(<Suspense>
-  <RouterProvider router={router} />
-</Suspense>)
+root.render(<RouterProvider router={router} />)

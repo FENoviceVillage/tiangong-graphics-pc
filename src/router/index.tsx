@@ -1,13 +1,13 @@
-import React, { lazy } from 'react'
+import { lazy } from 'react'
 import { Navigate, createBrowserRouter } from 'react-router-dom'
 import App from '../App'
-import Products from '@/pages/products'
 
 const About = lazy(() => import('@/pages/about/index'))
 const Home = lazy(() => import('@/pages/home/index'))
-const Quote = React.lazy(() => import('../pages/quote'))
-const Instructions = React.lazy(() => import('../pages/instructions'))
+const Quote = lazy(() => import('@/pages/quote'))
+const Instructions =lazy(() => import('@/pages/instructions'))
 const Dynamic = lazy(() => import('@/pages/dynamic/index'))
+const Products = lazy(()=>import('@/pages/products/index'))
 
 const router = createBrowserRouter([
   {
@@ -30,11 +30,6 @@ const router = createBrowserRouter([
         element: <Products />,
       },
       {
-        id: '/api',
-        path: '/api',
-        element: <About />,
-      },
-      {
         id: '/quote',
         path: '/quote',
         element: <Quote />,
@@ -43,11 +38,6 @@ const router = createBrowserRouter([
         id: '/dynamic',
         path: '/dynamic',
         element: <Dynamic />,
-      },
-      {
-        id: '/join',
-        path: '/join',
-        element: <About />,
       },
       {
         id: '/about',

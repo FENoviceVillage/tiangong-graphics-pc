@@ -1,5 +1,6 @@
 import React from 'react'
 import RelatedProducts from '../quote/components/relatedProducts'
+import ContactUs from '../../components/contactUs/index'
 import styles from './index.module.scss'
 import Instruction from './components/instruction'
 import logoIcon from '@//assets/img/Instructions/logo.png'
@@ -29,9 +30,9 @@ function Instructions(props: Props) {
             </article>
           </main>
         </div>
-        <aside>
+        <aside className={styles.aside}>
           <RelatedProducts products={['工业3D模型解析平台', '智能制造报价系统', '工程师笔记本']} />
-          <RelatedProducts products={['工业3D模型解析平台', '智能制造报价系统', '工程师笔记本']} />
+          <ContactUs containerClassName={styles.contact}></ContactUs>
         </aside>
       </div>
     </div>
