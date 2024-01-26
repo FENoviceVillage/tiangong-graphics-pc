@@ -169,7 +169,12 @@
             align-items: center;
             width: 700px;
             height: 200px;
-            background-color: #1b4b65;
+            > div {
+              @include flex-cc-c;
+              width: 500px;
+              padding: 10px;
+              border-bottom: 1px solid #e7e5e5;
+            }
           }
         }
       }

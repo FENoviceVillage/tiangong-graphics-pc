@@ -22,25 +22,25 @@ function About() {
           <div className={style.productsDetails}>
             <p>工业3d模型进行解析平台</p>
             <p>
-              通过对工业3d模型进行解析，转化成tuo-visual格式数据和模型整体缩略图。客户调用平台提供的API接口，可以在客户端网页上直接浏览3d模型，提供
+              通过对工业3d模型进行解析，转化成tuo-visual格式数据和模型整体缩略图。客户调用平台提供的API接口，可以在客户端网页上直接浏览3d模型，提
               <br />
-              模型尺寸测量、3D标注、特征识别、制造成本分析等功能
+              供模型尺寸测量、3D标注、特征识别、制造成本分析等功能
             </p>
             <p>
               智能制造接单系统开发成本分析、快速报价、实现在线交易
             </p>
             <p>
-              它集合了尺寸测量、3D标注、特征识别、制造成本分析等核心功能，帮助客户快速准确的获取工业品的制造成本，为交易的双方完成直观而准确的信息
+              它集合了尺寸测量、3D标注、特征识别、制造成本分析等核心功能，帮助客户快速准确的获取工业品的制造成本，为交易的双方完成直观而准确的信
               <br />
-              交流、产生标注数据和报价清单数据，实现在线交易。
+              息交流、产生标注数据和报价清单数据，实现在线交易。
             </p>
             <p>
               工程师笔记本
             </p>
             <p>
-              程师笔记本是一个工程模型管理系统。它帮助每一个工程师建立工程知识与3d模型的关联，结构设计与实际工程的关联。提供直观快速的交互体验帮助
+              程师笔记本是一个工程模型管理系统。它帮助每一个工程师建立工程知识与3d模型的关联，结构设计与实际工程的关联。提供直观快速的交互体验帮
               <br />
-              工程师建立自己的专属工程师知识库。
+              助工程师建立自己的专属工程师知识库。
             </p>
 
           </div>
@@ -60,8 +60,26 @@ function About() {
         </div>
         <div className={style.contact}>
           <h1>联系我们，获取天工图学技术免费试用和中文技术支持。</h1>
-          <div>
+          <div className={style.contactForm}>
+            <div className={style.contactFormTrHeader}>电话</div>
+            <div className={style.contactFormTrBody}>18574652970</div>
 
+            <div className={style.contactFormTrHeader}>询价</div>
+            <div className={style.contactFormTrBody}><a href="">获取产品报价</a></div>
+
+            <div className={style.contactFormTrHeader}>
+              免费试用
+            </div>
+            <div className={style.contactFormTrBody}><a href="">申请试用</a></div>
+
+            <div className={style.contactFormTrHeader}>技术解答</div>
+            <div className={style.contactFormTrBody}><a href="">获取技术支持</a></div>
+
+            <div className={style.contactFormTrHeader}>邮箱</div>
+            <div className={style.contactFormTrBody}>tiangongtuxue123@sina.com</div>
+
+            <div className={style.contactFormTrHeader}>公众号</div>
+            <div className={style.contactFormTrBody}>微信公众号“天工图学”，获取入门教程、产品资讯。</div>
           </div>
         </div>
       </div>

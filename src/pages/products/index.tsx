@@ -116,6 +116,38 @@ function Products() {
                   </div>
                 </div>
               </div>
+              <div className={style.attribute}>
+                <div className={style.attributeTitle}>
+                  格式支持1212
+                </div>
+                <div className={style.attributeBody}>
+                  <div>
+                    主流3D格式
+                  </div>
+                  <div>
+                    主流3D格式
+                  </div>
+                  <div>
+                    主流3D格式
+                  </div>
+                </div>
+              </div>
+              <div className={style.attribute}>
+                <div className={style.attributeTitle}>
+                  格式支持1212
+                </div>
+                <div className={style.attributeBody}>
+                  <div>
+                    主流3D格式
+                  </div>
+                  <div>
+                    主流3D格式
+                  </div>
+                  <div>
+                    主流3D格式
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
