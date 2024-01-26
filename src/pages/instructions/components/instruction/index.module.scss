@@ -4,7 +4,7 @@
   padding: 18px 12px;
   width: 100%;
   box-sizing: border-box;
-  background-image: url(../../../../assets/imgs/Instructions/内容底框.png);
+  background-image: url(../../../../assets/img/Instructions/border.png);
   background-size: cover;
   background-position-y: bottom;
   margin-bottom: 76px;
@@ -21,10 +21,10 @@
 
     div {
       padding-left: 68px;
-      background-image: url(../../../../assets/imgs/Instructions/文字说明图形.png);
+      background-image: url(../../../../assets/img/Instructions/firstBg.png);
       width: 250px;
       background-size: cover;
-      transform: translateX(5px);
+      transform: translateX(1px);
       font-size: 24px;
       font-family: PangMenZhengDao;
       font-weight: 400;

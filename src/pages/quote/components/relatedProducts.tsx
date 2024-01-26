@@ -1,5 +1,5 @@
 import styles from '../index.module.scss'
-import triangleIcon from '@//assets/imgs/quote/三角形指示箭头.png';
+import triangleIcon from '@//assets/img/quote/triangle.png'
 
 interface Props {
   products: string[]
@@ -12,10 +12,10 @@ function RelatedProducts(props: Props) {
         <aside></aside>
         <article>相关产品</article>
       </header>
-      <main>
+      <main className={styles.productItem}>
         {
-          props.products.map((value) => (
-            <section>
+          props.products.map(value => (
+            <section key={value}>
               <img src={triangleIcon} alt="" />
               <div>{value}</div>
             </section>

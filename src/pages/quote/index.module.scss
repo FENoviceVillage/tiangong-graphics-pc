@@ -1,15 +1,29 @@
 .main {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
+  background-color: #fff;
+  padding: 20px 16px;
+  article {
+    background-color: #FAFAFA;
 
+  }
+}
+.layout {
+  display: flex;
+  justify-content: center;
+  background-color: #F3F6F9;
+  .center {
+    display: flex;
+  }
+}
 .relatedProducts {
+  margin-left: 14px;
+  margin-top: 14px;
+  margin-bottom: 14px;
   width: 212px;
   height: 129px;
-  background: #FFFFFF;
-  border: 2px solid #E2E7EE;
+  background: #ffffff;
+  border: 2px solid #e2e7ee;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -35,11 +49,15 @@
     }
   }
 
-  main {
+  .productItem {
     padding: 12px 0 0 8px;
+    width: 100%;
+    background-color: unset;
+
     section {
       display: flex;
       align-items: center;
+      width: 100%;
 
       img {
         width: 10px;

@@ -11,19 +11,24 @@ function Product(props: Props) {
       <div>标签</div>
       <div className={styles.nodes}>
         <div className={styles.node}>
-          <div>开发商：{''}</div>
+          <div>
+            开发商：
+          </div>
         </div>
         <div className={styles.node}>
-          <div>当前版本：{''}</div>
+          <div>
+            当前版本：
+          </div>
         </div>
         <div className={styles.node}>
-          <div>产品类型：{''}</div>
+          <div>
+            产品类型：
+          </div>
         </div>
         <div className={styles.node}>
-          <div>产品功能：{''}</div>
-        </div>
-        <div className={styles.node}>
-          <div>产品语言：{''}</div>
+          <div>
+            产品功能：
+          </div>
         </div>
         <div className={styles.explain}>
           本产品的分类与介绍仅供参考，具体以商家网站介绍为准，如有疑问请来电 010-00000000 资讯

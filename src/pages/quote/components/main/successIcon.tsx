@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from '@//assets/imgs/quote/对钩图标.png';
+import Icon from '@//assets/img/quote/hook.png';
 
 type Props = {
   text: string

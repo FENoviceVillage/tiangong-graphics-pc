@@ -1,0 +1,34 @@
+.top {
+  width: 100%;
+  position: relative;
+
+  height: 200px;
+  background: #0caedf;
+  padding-top: 48px;
+  padding-left: 41px;
+  box-sizing: border-box;
+
+  img {
+    height: 37px;
+    position: absolute;
+    right: 33px;
+    top: 10px;
+  }
+
+  .h1 {
+    font-size: 36px;
+    font-family: Source Han Sans SC;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 28px;
+    padding-bottom: 18px;
+  }
+
+  .h2 {
+    font-size: 24px;
+    font-family: Source Han Sans SC;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 28px;
+  }
+}

@@ -1,12 +1,12 @@
 import React from 'react'
-import styles from './index.module.scss'
 import ProductCard from '../productCard'
+import styles from './index.module.scss'
 
 interface Props { }
 
 function ProductCardList(props: Props) {
   return (
-    <div>
+    <div className={styles.bgc}>
       <ProductCard />
       <ProductCard />
       <ProductCard />

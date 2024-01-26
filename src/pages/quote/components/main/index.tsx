@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './index.module.scss'
-import logo from '@//assets/imgs/quote/白色LOGO.png'
 import SuccessIcon from './successIcon'
+import logo from '@//assets/img/quote/logo.png'
+
 interface Props { }
 
 function Main(props: Props) {
@@ -21,7 +22,7 @@ function Main(props: Props) {
       </div>
       <div className={styles.content}>
         <div className={styles.border}>
-          <SuccessIcon text={'工业级3D数据格式转换'} />
+          <SuccessIcon text="工业级3D数据格式转换" />
           <section>
             通过单个界面即可读取和写入30多种CAD文件
             格式，无需依赖任何CAD系统；
@@ -37,7 +38,7 @@ function Main(props: Props) {
           </section>
         </div>
         <div className={styles.border}>
-          <SuccessIcon text={'世界级内核支持国产化'} />
+          <SuccessIcon text="世界级内核支持国产化" />
           <section>
             享誉全球的内核型产品，助力客户获得 商业成功；
           </section>
@@ -47,9 +48,8 @@ function Main(props: Props) {
 
         </div>
 
-
         <div className={styles.noBorder}>
-          <SuccessIcon text={'国际标准格式 安全有保障'} />
+          <SuccessIcon text="国际标准格式 安全有保障" />
           <article>
             符合 ISO 14739-1标准，导出包括 IGES、 STEP、 JT等
             标准格式，独立于其他第三方技术和外部库，中间格式
@@ -58,7 +58,7 @@ function Main(props: Props) {
 
         </div>
         <div className={styles.noBorder}>
-          <SuccessIcon text={'工业级3D数据格式转换'} />
+          <SuccessIcon text="工业级3D数据格式转换" />
           <article>
             天空图学独家提供专业的技术支持、定制开发等服务
             助您打造卓越应用。

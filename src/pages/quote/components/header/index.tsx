@@ -1,22 +1,26 @@
 import React from 'react'
+import Product from '../product'
 import styles from './index.module.scss'
-import product from '@//assets/imgs/quote/product.png'
+import product from '@//assets/img/quote/product.png'
+
 // 导入下载图标
-import downloadIcon from '@//assets/imgs/quote/下载图标.png';
+import downloadIcon from '@//assets/img/quote/download.png'
+
 // 导入收藏图标
-import collectIcon from '@//assets/imgs/quote/收藏图标.png';
+import collectIcon from '@//assets/img/quote/collect.png'
+
 // 导入放大镜图标
-import magnifierIcon from '@//assets/imgs/quote/放大镜图标.png';
+import magnifierIcon from '@//assets/img/quote/magnifier.png'
+
 // 导入申请试用图标
-import trialIcon from '@//assets/imgs/quote/申请试用图标.png';
-import Product from '../product';
+import trialIcon from '@//assets/img/quote/apply.png'
 
 function Header() {
   return (
     <div className={styles.main}>
       <div className={styles.left}>
         <img src={product} alt="产品图片" />
-        <div style={{padding: '0 12px'}}>
+        <div style={{ padding: '0 12px' }}>
           <div className={styles.download}>
             <div className={styles.icon}>
               <img src={downloadIcon} alt="下载图标" />
