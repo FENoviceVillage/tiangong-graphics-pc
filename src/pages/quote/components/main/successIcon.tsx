@@ -1,23 +1,27 @@
 import React from 'react'
-import Icon from '@//assets/img/quote/hook.png';
+import Icon from '@/assets/img/quote/hook.png'
 
-type Props = {
+interface Props {
   text: string
 }
-export const SuccessIcon: React.FC<Props> = props => {
+export const SuccessIcon: React.FC<Props> = (props) => {
   return (
     <div style={{
       display: 'flex',
-padding:' 10px 0'
-    }}>
+      padding: ' 10px 0',
+    }}
+    >
       <img src={Icon} alt="" style={{ width: 16, height: 16 }} />
       <div style={{
         fontSize: 16,
         fontFamily: 'Source Han Sans SC',
         fontWeight: 400,
         color: '#EC9C5B',
-      }}>{props.text}</div>
+      }}
+      >
+        {props.text}
+      </div>
     </div>
   )
-};
+}
 export default SuccessIcon

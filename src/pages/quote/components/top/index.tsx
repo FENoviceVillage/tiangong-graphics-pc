@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './index.module.scss'
-import logo from '@//assets/imgs/quote/白色LOGO.png'
+import logo from '@/assets/img/quote/logo.png'
 
 export const Top: React.FC = () => {
   return (

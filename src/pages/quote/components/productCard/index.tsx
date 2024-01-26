@@ -1,13 +1,13 @@
 import React from 'react'
 import Product from '../product'
 import styles from './index.module.scss'
-import product from '@//assets/img/quote/product.png'
+import product from '@/assets/img/quote/product.png'
 
 // 导入放大镜图标
-import magnifierIcon from '@//assets/img/quote/magnifier.png'
+import magnifierIcon from '@/assets/img/quote/magnifier.png'
 
 // 导入申请试用图标
-import trialIcon from '@//assets/img/quote/apply.png'
+import trialIcon from '@/assets/img/quote/apply.png'
 
 interface Props { }
 

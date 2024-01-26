@@ -1,19 +1,19 @@
 import React from 'react'
 import Product from '../product'
 import styles from './index.module.scss'
-import product from '@//assets/img/quote/product.png'
+import product from '@/assets/img/quote/product.png'
 
 // 导入下载图标
-import downloadIcon from '@//assets/img/quote/download.png'
+import downloadIcon from '@/assets/img/quote/download.png'
 
 // 导入收藏图标
-import collectIcon from '@//assets/img/quote/collect.png'
+import collectIcon from '@/assets/img/quote/collect.png'
 
 // 导入放大镜图标
-import magnifierIcon from '@//assets/img/quote/magnifier.png'
+import magnifierIcon from '@/assets/img/quote/magnifier.png'
 
 // 导入申请试用图标
-import trialIcon from '@//assets/img/quote/apply.png'
+import trialIcon from '@/assets/img/quote/apply.png'
 
 function Header() {
   return (

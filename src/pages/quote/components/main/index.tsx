@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './index.module.scss'
 import SuccessIcon from './successIcon'
-import logo from '@//assets/img/quote/logo.png'
+import logo from '@/assets/img/quote/logo.png'
 
 interface Props { }
 

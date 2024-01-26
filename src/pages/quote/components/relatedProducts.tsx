@@ -1,5 +1,5 @@
 import styles from '../index.module.scss'
-import triangleIcon from '@//assets/img/quote/triangle.png'
+import triangleIcon from '@/assets/img/quote/triangle.png'
 
 interface Props {
   products: string[]
