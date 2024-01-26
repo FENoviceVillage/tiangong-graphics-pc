@@ -17,8 +17,8 @@ function Dynamic() {
           <DynamicTable title="新闻资讯"></DynamicTable>
         </div>
         <div className={styles.bodyAside}>
-          <ContactUs></ContactUs>
           <DynamicCategory></DynamicCategory>
+          <ContactUs></ContactUs>
         </div>
       </div>
     </>

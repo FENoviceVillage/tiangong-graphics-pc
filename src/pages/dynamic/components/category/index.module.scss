@@ -1,0 +1,50 @@
+.category {
+  width: 212px;
+  height: 129px;
+  border: 1px solid #397393;
+  border-radius: 5px;
+  padding: 13px 24px 24px 17px;
+
+  &Title {
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 16px;
+    font-size: 15px;
+    color: #333333;
+    margin-bottom: 20px;
+
+    &::before {
+      display: inline-block;
+      content: '';
+      width: 5px;
+      height: 15px;
+      margin-right: 2px;
+      background: #397393;
+    }
+  }
+
+  &Content {
+    display: grid;
+    grid-template-columns: repeat(2, 77px);
+    grid-template-rows: repeat(2, 18px);
+    grid-row-gap: 18px;
+    grid-column-gap: 16px;
+
+    &Item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+
+      &Icon {
+        width: 18px;
+        height: 18px;
+      }
+      &Text {
+        font-size: 12px;
+        color: #333333;
+      }
+    }
+  }
+}
