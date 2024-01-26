@@ -2,11 +2,11 @@ import React, { lazy } from 'react'
 import { Navigate, createBrowserRouter } from 'react-router-dom'
 import App from '../App'
 
-const About = lazy(() => import('../pages/About'))
-const Home = lazy(() => import('../pages/home'))
+const About = lazy(() => import('@/pages/About/index'))
+const Home = lazy(() => import('@/pages/home/index'))
 const Quote = React.lazy(() => import('../pages/quote'))
 const Instructions = React.lazy(() => import('../pages/instructions'))
-const Dynamic = lazy(() => import('../pages/dynamic'))
+const Dynamic = lazy(() => import('@/pages/dynamic/index'))
 
 const router = createBrowserRouter([
   {
@@ -53,6 +53,11 @@ const router = createBrowserRouter([
         element: <Instructions />,
       },
     ],
+
+  },
+  {
+    path: '*',
+    element: <Navigate to="/home" />,
   },
 ])
 

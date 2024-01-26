@@ -7,8 +7,12 @@
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": ".",
     "module": "esnext",
     "moduleResolution": "node",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "resolveJsonModule": true,
     "allowJs": true,
     "strict": true,
