@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ContactUs from '../../components/contactUs/index'
 import styles from './index.module.scss'
 import Header from './components/header'
 import Main from './components/main'
@@ -19,7 +20,10 @@ export const Quote: React.FC = () => {
             <ProductCardList />
           </article>
         </div>
-        <RelatedProducts products={['智能制造报价系统', '工程师笔记本']} />
+        <aside className={styles.aside}>
+          <RelatedProducts products={['智能制造报价系统', '工程师笔记本']} />
+          <ContactUs containerClassName={styles.contact}></ContactUs>
+        </aside>
       </div>
 
     </div>

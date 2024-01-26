@@ -1,5 +1,5 @@
 .main {
-  background-color: #F2F7FA;
+  background-color: #f2f7fa;
   @mixin center_c() {
     position: absolute;
     top: 50%;
@@ -22,10 +22,23 @@
   .layout {
     display: flex;
   }
+
+  .aside {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding: 12px 14px;
+
+    .contact {
+      background-color: #ffffff;
+      border: 2px solid #e2e7ee;
+    }
+  }
+
   .bg {
     background-color: #fff;
 
-    padding:0 16px;
+    padding: 0 16px;
     main {
       width: 724px;
       padding: 0 16px;
@@ -49,5 +62,4 @@
       }
     }
   }
-
 }
