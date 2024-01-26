@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './index.module.scss'
+import Instruction from './components/instruction'
 import logoIcon from '@//assets/imgs/Instructions/图形logo.png'
 import myIcon from '@//assets/imgs/Instructions/符号.png'
-import Instruction from './components/instruction'
+
 interface Props {}
 
 function Instructions(props: Props) {
@@ -16,6 +17,11 @@ function Instructions(props: Props) {
         </header>
 
         <article>
+          <Instruction isFirst={true}></Instruction>
+          <Instruction></Instruction>
+          <Instruction></Instruction>
+          <Instruction></Instruction>
+          <Instruction></Instruction>
           <Instruction></Instruction>
         </article>
       </main>

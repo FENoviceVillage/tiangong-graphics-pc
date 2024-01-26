@@ -1,15 +1,77 @@
-main {
+.main {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 18px 12px;
-  background-color: skyblue;
   width: 100%;
+  box-sizing: border-box;
+  background-image: url(../../../../assets/imgs/Instructions/内容底框.png);
+  background-size: cover;
+  background-position-y: bottom;
+  margin-bottom: 76px;
+  position: relative;
+
+  .fixed {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+
+    div {
+      padding-left: 68px;
+      background-image: url(../../../../assets/imgs/Instructions/文字说明图形.png);
+      width: 250px;
+      background-size: cover;
+      transform: translateX(5px);
+      font-size: 24px;
+      font-family: PangMenZhengDao;
+      font-weight: 400;
+      font-style: italic;
+      color: #FFFFFF;
+    }
+
+    footer {
+      width: 588px;
+      height: 2px;
+      background: #F0B183;
+
+    }
+  }
 
   aside {
+    background-color: skyblue;
+    width: 395px;
+    height: 217px;
+    margin-right: 30px;
+
     video {
       width: 395px;
       height: 217px;
+    }
+  }
+
+  .context {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      font-size: 12px;
+      font-family: Source Han Sans SC;
+      font-weight: 400;
+      color: #EC9C5B;
+      line-height: 21px;
+      margin-bottom: 16px;
+    }
+
+    article {
+      font-size: 9px;
+      font-family: Source Han Sans SC;
+      font-weight: 400;
+      color: #513F72;
+      line-height: 15px;
     }
   }
 

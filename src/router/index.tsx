@@ -33,14 +33,9 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        id: '/price',
-        path: '/price',
-        element: <About />,
-      },
-      {
-        id: '/instruction',
-        path: '/instruction',
-        element: <About />,
+        id: '/quote',
+        path: '/quote',
+        element: <Quote />,
       },
       {
         id: '/dynamic',
