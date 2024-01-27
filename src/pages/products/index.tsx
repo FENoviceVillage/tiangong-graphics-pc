@@ -77,7 +77,7 @@ function Products() {
                 免费试用10次，按需选配
               </p>
               <p>按次计费，买多省多</p>
-              <div className={style.request}>
+              <div className={style.crowdRequest}>
                 <button>申请试用</button>
                 <button>申请购买</button>
               </div>
@@ -88,7 +88,7 @@ function Products() {
                 免费试用10次，按需选配
               </p>
               <p>按次计费，买多省多</p>
-              <div className={style.request}>
+              <div className={style.crowdRequest}>
                 <button>申请试用</button>
                 <button>申请购买</button>
               </div>
