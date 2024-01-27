@@ -17,7 +17,7 @@ export const useAppStore = create<State & Action>(set => ({
   videos: [],
   news: [],
   getProductsInfo: async () => {
-    const res: any = await $.get<object, ProductResponse>({}, {
+    const res = await window.$.get<ProductResponse, object>({}, {
       url: '/api/products',
     })
 
@@ -27,18 +27,20 @@ export const useAppStore = create<State & Action>(set => ({
     }))
   },
   getVideosInfo: async () => {
-    const res: any = await $.get<object, VideoResponse>({}, {
+    const res = await window.$.get<VideoResponse, object>({}, {
       url: '/api/videos',
     })
+
     return set(state => ({
       ...state,
       videos: res.data,
     }))
   },
   getNewsInfo: async () => {
-    const res: any = await $.get<object, NewsResponse>({}, {
+    const res = await window.$.get<NewsResponse, object>({}, {
       url: '/api/news',
     })
+
     return set(state => ({
       ...state,
       news: res.data,
