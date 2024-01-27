@@ -15,7 +15,7 @@ function ProductCard(props: any) {
     <div className={styles.card}>
       <aside>
         <div className={styles.left}>
-          <img src={product} alt="产品图片" />
+          <img src={productData.smallimage} alt="产品图片" />
           <div style={{ padding: '0 12px' }}>
 
             <div className={styles.price}>
