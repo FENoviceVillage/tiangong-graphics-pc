@@ -9,9 +9,8 @@ import magnifierIcon from '@/assets/img/quote/magnifier.png'
 // 导入申请试用图标
 import trialIcon from '@/assets/img/quote/apply.png'
 
-interface Props { }
-
-function ProductCard(props: Props) {
+function ProductCard(props: any) {
+  const productData = props?.Product?.attributes
   return (
     <div className={styles.card}>
       <aside>
@@ -33,7 +32,7 @@ function ProductCard(props: Props) {
         </div>
       </aside>
       <main>
-        <Product />
+        <Product Data={productData} />
       </main>
     </div>
   )

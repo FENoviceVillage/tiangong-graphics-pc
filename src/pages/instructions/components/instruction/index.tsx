@@ -10,7 +10,7 @@ function Instruction(props: Props) {
       {
         props.isFirst && (
           <div className={styles.fixed}>
-            <div>/文字说明</div>
+            <div>文字说明</div>
             <footer></footer>
           </div>
         )

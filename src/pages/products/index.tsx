@@ -52,7 +52,6 @@ function Products() {
         <p>工业3D模型解析平台提供了API接口，实现客户快速的在线浏览3d模型、测量、3D标注、特征识别、制造成本分析等功能</p>
         <FeaturesCard />
       </div>
-      <hr />
       <div className={style.parse}>
         <h1>工业3d模型解析平台</h1>
         <p>
@@ -104,50 +103,94 @@ function Products() {
             <div>
               <div className={style.attribute}>
                 <div className={style.attributeTitle}>
-                  格式支持1212
+                  格式支持
                 </div>
                 <div className={style.attributeBody}>
                   <div>
                     主流3D格式
                   </div>
                   <div>
-                    主流3D格式
+                    solidworks、NX、CATIA V5/V6、 Rhino、 Inventor、proE/Creo、 3DXML、JT、
+                    parasolid、 step、iges
                   </div>
                   <div>
-                    主流3D格式
+                    2D格式支持
+                  </div>
+                  <div>
+                    dwg、dxf
+                  </div>
+                  <div>
+                    主流开源格式支持
+                  </div>
+                  <div>
+                    gltf、obj、 stl、fbx、dae、3mf、brep、gcode
                   </div>
                 </div>
               </div>
               <div className={style.attribute}>
                 <div className={style.attributeTitle}>
-                  格式支持1212
+                  3D 功能
                 </div>
                 <div className={style.attributeBody}>
                   <div>
-                    主流3D格式
+                    3D界面交互(平移/缩放/旋转/默认视图切换)
                   </div>
                   <div>
-                    主流3D格式
+                    3结构树
                   </div>
                   <div>
-                    主流3D格式
+                    尺寸测量
+                  </div>
+                  <div>
+                    剖切、爆炸、相框视图
+                  </div>
+                  <div>
+                    缩略图生成
+                  </div>
+                  <div>
+                    3D标注
+                  </div>
+                  <div>
+                    投影模式切换（正交/透视）
                   </div>
                 </div>
               </div>
               <div className={style.attribute}>
                 <div className={style.attributeTitle}>
-                  格式支持1212
+                  2D 功能
                 </div>
                 <div className={style.attributeBody}>
                   <div>
-                    主流3D格式
+                    2D界面交互（平移/缩放）
                   </div>
                   <div>
-                    主流3D格式
+                    图层功能
                   </div>
                   <div>
-                    主流3D格式
+                    layout
                   </div>
+                </div>
+              </div>
+              <div className={style.attribute}>
+                <div className={style.attributeTitle}>
+                  数据功能
+                </div>
+                <div className={style.attributeBody}>
+                  <div>
+                    3D文件测量参数自动输出
+                  </div>
+                </div>
+              </div>
+              <div className={style.attribute}>
+                <div className={style.attributeTitle}>
+                  个人版功能
+                </div>
+                <div className={style.attributeBody}>
+                </div>
+              </div>
+              <div className={style.attribute}>
+                <div className={style.attributeTitle}>
+                  技术支持
                 </div>
               </div>
             </div>
