@@ -6,7 +6,7 @@ a {
   box-sizing: border-box;
   align-items: center;
   .index {
-    height: 92vh;
+    height: 927px;
     width: 100%;
     @include flex-rc-sa;
     background-image: url(../../assets/img/about/about-backgroud.png);
@@ -34,7 +34,7 @@ a {
     justify-content: center;
     align-items: center;
     background: #e1e0e3;
-    padding: 42px 100px;
+    padding: 42px 515px;
     width: 100%;
     .products {
       color: #333;

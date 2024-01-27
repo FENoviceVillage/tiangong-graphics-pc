@@ -1,8 +1,8 @@
 .card {
   width: 710px;
   height: 237px;
-  background: #F3F6F9;
-  box-shadow: 0px 6px 5px 0px rgba(133,133,159,0.35);
+  background: #f3f6f9;
+  box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
   padding-top: 12px;
   margin-bottom: 54px;
   box-sizing: border-box;
@@ -19,9 +19,7 @@
       height: 144px;
     }
 
-
     .price {
-
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -43,13 +41,15 @@
       .btn1 {
         width: 98px;
         height: 27px;
-        background: #28A745;
+        background: #28a745;
         border-radius: 5px;
         margin-right: 7px;
         display: flex;
         align-items: center;
         justify-content: center;
-
+        > img {
+          margin-right: 4px;
+        }
         .text {
           margin-left: 2px;
           font-size: 12px;
@@ -63,12 +63,15 @@
       .btn2 {
         width: 98px;
         height: 27px;
-        background: #F89406;
+        background: #f89406;
         border-radius: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
-
+        > img {
+          margin-top: -2px;
+          margin-right: 4px;
+        }
         .text {
           margin-left: 2px;
           font-size: 12px;
@@ -78,7 +81,6 @@
           line-height: 28px;
         }
       }
-
     }
   }
 }

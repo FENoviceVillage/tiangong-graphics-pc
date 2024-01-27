@@ -1,13 +1,12 @@
-import React from 'react'
 import styles from './index.module.scss'
 
-interface Props { }
+function Product(props: any) {
+  const { title, description, version, video, shortdescription } = props?.Data
 
-function Product(props: Props) {
   return (
     <div className={styles.product}>
-      <div className={styles.title}>工业3D模型解析平台</div>
-      <div>更快、更准确的CAD数据转换工具包,3D数据格式转换首选解决方案。</div>
+      <div className={styles.title}>{title}</div>
+      <div>{shortdescription}</div>
       <div>标签</div>
       <div className={styles.nodes}>
         <div className={styles.node}>
@@ -18,6 +17,7 @@ function Product(props: Props) {
         <div className={styles.node}>
           <div>
             当前版本：
+            {version}
           </div>
         </div>
         <div className={styles.node}>

@@ -1,17 +1,19 @@
 import React from 'react'
 import ProductCard from '../productCard'
 import styles from './index.module.scss'
+import { useAppStore } from '@/store'
 
-interface Props { }
+function ProductCardList() {
+  const appStore = useAppStore()
 
-function ProductCardList(props: Props) {
   return (
     <div className={styles.bgc}>
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
+      {
+        appStore.products.map((item, index) =>
+          <ProductCard key={index} Product={item} />,
+        )
+      }
+
     </div>
   )
 }
