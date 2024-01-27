@@ -1,7 +1,6 @@
-import React from 'react'
-import styles from './index.module.scss'
-import DynamicTable from './components/table/index'
 import DynamicCategory from './components/category'
+import DynamicTable from './components/table/index'
+import styles from './index.module.scss'
 import ContactUs from '@/components/contactUs/index'
 
 function Dynamic() {
