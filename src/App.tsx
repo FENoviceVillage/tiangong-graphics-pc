@@ -12,7 +12,6 @@ function App() {
     appStore.getVideosInfo()
     appStore.getNewsInfo()
   }, [])
-  console.log(appStore.products, appStore.news, appStore.videos)
 
   return (
     <>
