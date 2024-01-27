@@ -32,34 +32,40 @@ class Request {
     return this.axios.request(params)
   }
 
-  public post<T extends Record<string, any>, K extends Record<string, any>>(data: T, customConfig: CustomConfig, requestConfig: AxiosRequestConfig) {
-    return this.request({
-      method: 'POST',
-      data,
-      ...requestConfig,
-    }).then((res: AxiosResponse<K>) => {
+  public async post<T extends Record<string, any>, K extends Record<string, any>>(data: T, requestConfig: Omit<AxiosRequestConfig, 'method'>, customConfig: CustomConfig = { showMsg: false }): Promise<AxiosResponse<K>> {
+    try {
+      const res = await this.request({
+        method: 'POST',
+        data,
+        ...requestConfig,
+      })
       return res.data
-    }).catch((error: AxiosError) => {
+    }
+    catch (error: any) {
       customConfig.showMsg && message.error(error.message)
       return Promise.reject(error)
-    })
+    }
   }
 
-  public get<T extends Record<string, any>, K extends Record<string, any>>(data: T, customConfig: CustomConfig, requestConfig: AxiosRequestConfig) {
-    return this.request({
-      method: 'GET',
-      params: data,
-      ...requestConfig,
-    }).then((res: AxiosResponse<K>) => {
+  public async get<T extends Record<string, any>, K extends Record<string, any>>(data: T, requestConfig: Omit<AxiosRequestConfig, 'method'>, customConfig: CustomConfig = { showMsg: false }): Promise<AxiosResponse<K>> {
+    try {
+      const res = await this.request({
+        method: 'GET',
+        params: data,
+        ...requestConfig,
+      })
       return res.data
-    }).catch((error) => {
+    }
+    catch (error: any) {
       customConfig.showMsg && message.error(error.message)
       return Promise.reject(error)
-    })
+    }
   }
 }
-
+const request = new Request({
+  baseURL: 'https://www.tuocad.com/tuo-cms',
+})
 window.$ = {
-  post: <T extends Record<string, any>, K extends Record<string, any>>(data: T, customConfig: CustomConfig, requestConfig: AxiosRequestConfig) => new Request({}).post<T, K>(data, customConfig, requestConfig),
-  get: <T extends Record<string, any>, K extends Record<string, any>>(data: T, customConfig: CustomConfig, requestConfig: AxiosRequestConfig) => new Request({}).get<T, K>(data, customConfig, requestConfig),
+  post: <T extends Record<string, any>, K extends Record<string, any>>(data: T, requestConfig: Omit<AxiosRequestConfig, 'method'>, customConfig: CustomConfig = { showMsg: false }) => request.post<T, K>(data, requestConfig, customConfig),
+  get: <T extends Record<string, any>, K extends Record<string, any>>(data: T, requestConfig: Omit<AxiosRequestConfig, 'method'>, customConfig: CustomConfig = { showMsg: false }) => request.get<T, K>(data, requestConfig, customConfig),
 }

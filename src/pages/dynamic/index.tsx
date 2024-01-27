@@ -3,6 +3,7 @@ import styles from './index.module.scss'
 import DynamicTable from './components/table/index'
 import DynamicCategory from './components/category'
 import ContactUs from '@/components/contactUs/index'
+import { getNewsInfo, getProductsInfo, getVideosInfo } from '@/api/request'
 
 function Dynamic() {
   return (
