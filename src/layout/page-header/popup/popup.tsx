@@ -24,7 +24,7 @@ function ProductPopup() {
         appStore.products.map(item => (
           <div
             className={classNames({
-              [styles.popupActive]: String(item.id) === category,
+              [styles.contentActive]: String(item.id) === category,
             })}
             key={item.id}
             onClick={() => onClick(String(item.id))}
