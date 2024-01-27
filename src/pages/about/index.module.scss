@@ -9,12 +9,12 @@ a {
     height: 927px;
     width: 100%;
     @include flex-rc-sa;
-    background-image: url(../../assets/img/about/about-backgroud.png);
+    background-image: url(https://res.tuocad.com/image/CAX%E5%A4%A9%E5%B7%A5%E5%9B%BE%E5%AD%A6/%E5%8A%A0%E5%85%A5%E6%88%91%E4%BB%AC-%E5%A4%A7%E6%A8%AA%E5%9B%BE.jpg);
     background-size: cover;
     .subheading {
       font-size: 22px;
       color: #397393;
-      > h3 {
+      contact > h3 {
         font-size: 42px;
         letter-spacing: 5px;
         // font-family: PangMenZhengDao;
@@ -65,7 +65,6 @@ a {
       }
     }
     .contact {
-      width: 75%;
       margin-top: 50px;
       color: #333;
       > h1 {
@@ -75,6 +74,7 @@ a {
         margin-bottom: 20px;
       }
       &Form {
+        width: 850px;
         border: 2px solid #397393;
         box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
         border-radius: 10px;

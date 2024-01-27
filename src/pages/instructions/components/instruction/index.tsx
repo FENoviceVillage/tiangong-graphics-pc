@@ -2,9 +2,12 @@ import styles from './index.module.scss'
 
 interface Props {
   isFirst?: boolean
+  Data?: any
 }
 
 function Instruction(props: Props) {
+  const { description, title, video } = props?.Data?.attributes
+
   return (
     <div className={styles.main}>
       {
@@ -17,14 +20,12 @@ function Instruction(props: Props) {
       }
 
       <aside>
-        <video src=""></video>
+        <video src={video}></video>
       </aside>
       <div className={styles.context}>
-        <div className={styles.header}>天工图学使用说明</div>
+        <div className={styles.header}>{title}</div>
         <article>
-          <section>通过单个界面即可读取和写入30多种CAD文件 格式，无需依赖任何CAD系统；</section>
-          <section>通过单个界面即可读取和写入30多种CAD文件 格式，无需依赖任何CAD系统；</section>
-          <section>通过单个界面即可读取和写入30多种CAD文件 格式，无需依赖任何CAD系统；</section>
+          <section>{description}</section>
         </article>
       </div>
     </div>
