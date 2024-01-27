@@ -1,19 +1,14 @@
 import styles from './index.module.scss'
 
 function Product(props: any) {
-  const { title, description, version, video, shortdescription } = props?.Data
+  const { title, featuredescription, version, functiondescription, shortdescription } = props?.Data
 
   return (
     <div className={styles.product}>
       <div className={styles.title}>{title}</div>
-      <div>{shortdescription}</div>
+      <div className={styles.smallTitle}>{shortdescription}</div>
       <div>标签</div>
       <div className={styles.nodes}>
-        <div className={styles.node}>
-          <div>
-            开发商：
-          </div>
-        </div>
         <div className={styles.node}>
           <div>
             当前版本：
@@ -22,12 +17,14 @@ function Product(props: any) {
         </div>
         <div className={styles.node}>
           <div>
-            产品类型：
+            产品特性：
+            {functiondescription}
           </div>
         </div>
         <div className={styles.node}>
           <div>
             产品功能：
+            {featuredescription}
           </div>
         </div>
         <div className={styles.explain}>
