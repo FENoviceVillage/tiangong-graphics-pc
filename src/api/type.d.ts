@@ -7,6 +7,6 @@ declare global {
   }
 }
 
-export interface CustomConfig extends AxiosRequestConfig {
+export interface CustomConfig {
   showMsg?: boolean
 }

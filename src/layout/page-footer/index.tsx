@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './index.module.scss'
-import SymbolImg from '@/assets/img/footer/tiangong-symbol.png'
 import PublicAccount from '@/assets/img/contactUs/tiangong-public-account.png'
 
 function PageFooter() {
@@ -20,11 +19,7 @@ function PageFooter() {
           <img src={PublicAccount} className={styles.bodyRightImg} />
         </div>
       </div>
-      <div className={styles.footer}>
-        <div>厦门点射科技有限公司</div>
-        <img src={SymbolImg} className={styles.footerImg} />
-        <div>Copyright 2020-2023</div>
-      </div>
+      <div className={styles.footer}></div>
     </footer>
   )
 }
