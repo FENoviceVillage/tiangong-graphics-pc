@@ -1,7 +1,6 @@
 @import '../../assets/styles/mixins.scss';
 .content {
-  background-image: url(../../assets/img/products/backgroud.png);
-  background-size: cover;
+  background: #bcd8e8;
   width: 100%;
   z-index: -99;
   .topShow {
@@ -102,7 +101,7 @@
     }
   }
   .palyFree {
-    height: 140vh;
+    height: 1557px;
     @include flex-cc-c;
     .paidContent {
       @include flex-r;
@@ -161,23 +160,30 @@
         }
         .attribute {
           border-top: 1px solid #e5eaed;
-          padding: 20px;
+          padding: 8px;
           @include flex-rc-sb;
+          color: #3c3c3c;
           &Title {
-            color: #3c3c3c;
             font-size: 20px;
             font-weight: 600;
+            width: 200px;
           }
           &Body {
+            font-size: 16px;
             @include flex-c;
             align-items: center;
-            width: 700px;
-            height: 200px;
+            flex: 1;
+            font-weight: 600;
             > div {
-              @include flex-cc-c;
-              width: 500px;
-              padding: 10px;
+              font-family: Source Han Sans SC;
+              @include flex-rc-c;
+              width: 600px;
+              line-height: 24px;
+              padding: 12px;
               border-bottom: 1px solid #e7e5e5;
+            }
+            div:last-of-type {
+              border: 0;
             }
           }
         }
