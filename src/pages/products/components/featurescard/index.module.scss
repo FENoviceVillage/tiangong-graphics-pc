@@ -2,12 +2,14 @@
 
 .card {
   @include flex-cc-c;
-  width: 221px;
+  position: relative;
+  width: 206px;
   height: 224px;
-  background: #fff;
+  background-color: #b5d3e5;
   box-shadow: 0px 4px 5px 0px rgba(133, 133, 159, 0.35);
   border-radius: 10px;
   color: #397393;
+  z-index: 100;
   &Img {
     width: 100px;
     height: 100px;
@@ -18,4 +20,25 @@
     margin-bottom: 9px;
     font-weight: 600;
   }
+  span {
+    font-size: 15px;
+    // color: #fff;
+  }
+}
+.card::before {
+  content: '';
+  width: 221px;
+  height: 224px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: 8px;
+  z-index: -1;
+  box-shadow: 0px 4px 5px 0px rgba(133, 133, 159, 0.35);
+}
+.card:hover {
+  top: -5px;
 }

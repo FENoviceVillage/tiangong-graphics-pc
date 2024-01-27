@@ -7,7 +7,7 @@ function FeaturesCard() {
     <div className={style.card}>
       <img src={Lightning} alt="" className={style.cardImg} />
       <h3>快速反应</h3>
-      <p>模型解析速度行业领先</p>
+      <span>模型解析速度行业领先</span>
     </div>
   )
 }
