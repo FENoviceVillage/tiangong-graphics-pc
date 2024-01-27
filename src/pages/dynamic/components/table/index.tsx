@@ -1,7 +1,8 @@
 import React from 'react'
-import { Pagination } from 'antd'
+import Pagination from 'rc-pagination'
 import styles from './index.module.scss'
 import DynamicTableItem from './components/index'
+import './rc-pagination.css'
 
 interface Props {
   title: string
@@ -22,7 +23,7 @@ function DynamicTable(props: Props) {
           <DynamicTableItem></DynamicTableItem>
         </div>
         <div className={styles.tableBodyPagination}>
-          <Pagination defaultCurrent={1} total={50} />
+          <Pagination total={1000} />
         </div>
       </div>
     </div>
