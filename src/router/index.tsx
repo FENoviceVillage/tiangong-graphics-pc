@@ -1,13 +1,12 @@
 import { lazy } from 'react'
 import { Navigate, createBrowserRouter } from 'react-router-dom'
 import App from '../App'
-
-const About = lazy(() => import('@/pages/about/index'))
-const Home = lazy(() => import('@/pages/home/index'))
-const Quote = lazy(() => import('@/pages/quote'))
-const Instructions =lazy(() => import('@/pages/instructions'))
-const Dynamic = lazy(() => import('@/pages/dynamic/index'))
-const Products = lazy(()=>import('@/pages/products/index'))
+import Home from '@/pages/home'
+import Products from '@/pages/products'
+import Quote from '@/pages/quote'
+import Dynamic from '@/pages/dynamic'
+import About from '@/pages/about'
+import Instructions from '@/pages/instructions'
 
 const router = createBrowserRouter([
   {

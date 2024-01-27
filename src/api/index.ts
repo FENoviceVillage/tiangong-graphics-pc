@@ -1,12 +1,12 @@
-import type { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, CreateAxiosDefaults } from 'axios'
+import { message } from 'antd'
+import type { AxiosInstance, AxiosRequestConfig, CreateAxiosDefaults } from 'axios'
 import axios from 'axios'
 import nprogress from 'nprogress'
 import 'nprogress/nprogress.css'
-import { message } from 'antd'
 import type { CustomConfig } from './type'
 
-class Request {
-  private axios: AxiosInstance
+export class Request {
+  private readonly axios: AxiosInstance
 
   constructor(params: CreateAxiosDefaults) {
     this.axios = axios.create(params)
@@ -28,38 +28,39 @@ class Request {
     })
   }
 
-  private request(params: AxiosRequestConfig) {
-    return this.axios.request(params)
+  private request<T extends Record<string, any>>(requestConfig: AxiosRequestConfig, customConfig: CustomConfig = { showMsg: false }) {
+    return new Promise<T>((resolve, reject) => {
+      this.axios<T>(requestConfig).then((res) => {
+        resolve(res.data)
+      }).catch((error) => {
+        customConfig.showMsg && message.error(error.message)
+        reject(error)
+      })
+    })
   }
 
-  public post<T extends Record<string, any>, K extends Record<string, any>>(data: T, customConfig: CustomConfig, requestConfig: AxiosRequestConfig) {
-    return this.request({
+  public post<T extends Record<string, any>, K extends Record<string, any>>(data: K, requestConfig: Omit<AxiosRequestConfig, 'method' | 'data'>, customConfig?: CustomConfig) {
+    return this.request<T>({
       method: 'POST',
       data,
       ...requestConfig,
-    }).then((res: AxiosResponse<K>) => {
-      return res.data
-    }).catch((error: AxiosError) => {
-      customConfig.showMsg && message.error(error.message)
-      return Promise.reject(error)
-    })
+    }, customConfig)
   }
 
-  public get<T extends Record<string, any>, K extends Record<string, any>>(data: T, customConfig: CustomConfig, requestConfig: AxiosRequestConfig) {
-    return this.request({
+  public get<T extends Record<string, any>, K extends Record<string, any>>(data: K, requestConfig: Omit<AxiosRequestConfig, 'method' | 'params'>, customConfig?: CustomConfig) {
+    return this.request<T>({
       method: 'GET',
       params: data,
       ...requestConfig,
-    }).then((res: AxiosResponse<K>) => {
-      return res.data
-    }).catch((error) => {
-      customConfig.showMsg && message.error(error.message)
-      return Promise.reject(error)
-    })
+    }, customConfig)
   }
 }
 
+const request = new Request({
+  baseURL: 'https://www.tuocad.com/tuo-cms',
+})
+
 window.$ = {
-  post: <T extends Record<string, any>, K extends Record<string, any>>(data: T, customConfig: CustomConfig, requestConfig: AxiosRequestConfig) => new Request({}).post<T, K>(data, customConfig, requestConfig),
-  get: <T extends Record<string, any>, K extends Record<string, any>>(data: T, customConfig: CustomConfig, requestConfig: AxiosRequestConfig) => new Request({}).get<T, K>(data, customConfig, requestConfig),
+  post: request.post.bind(request),
+  get: request.get.bind(request),
 }

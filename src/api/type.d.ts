@@ -1,12 +1,14 @@
+import type { Request } from '.'
+
 declare global {
   interface Window {
     $: {
-      post: <T extends Record<string, any>, K extends Record<string, any>>(data: T, customConfig: CustomConfig, requestConfig: AxiosRequestConfig) => Promise<K>
-      get: <T extends Record<string, any>, K extends Record<string, any>>(data: T, customConfig: CustomConfig, requestConfig: AxiosRequestConfig) => Promise<K>
+      post: Request['post']
+      get: Request['get']
     }
   }
 }
 
-export interface CustomConfig extends AxiosRequestConfig {
+export interface CustomConfig {
   showMsg?: boolean
 }

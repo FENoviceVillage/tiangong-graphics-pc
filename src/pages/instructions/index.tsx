@@ -21,7 +21,7 @@ function Instructions(props: Props) {
             </header>
 
             <article>
-              <Instruction isFirst={true}></Instruction>
+              <Instruction></Instruction>
               <Instruction></Instruction>
               <Instruction></Instruction>
               <Instruction></Instruction>
