@@ -36,65 +36,67 @@ a {
     background: #e1e0e3;
     padding: 42px 100px;
     width: 100%;
-    .products {
-      color: #333;
-      > h1 {
-        font-weight: 600;
-        color: #397393;
-        font-size: 28px;
-        margin-bottom: 20px;
+    .join {
+      .products {
+        color: #333;
+        > h1 {
+          font-weight: 600;
+          color: #397393;
+          font-size: 28px;
+          margin-bottom: 20px;
+        }
+        .productsDetails {
+          :nth-child(2n + 1) {
+            margin: 10px 0;
+            font-weight: 600;
+          }
+        }
       }
-      .productsDetails {
-        :nth-child(2n + 1) {
-          margin: 10px 0;
+      .about {
+        margin-top: 50px;
+        color: #333;
+        > h1 {
+          font-weight: 600;
+          color: #397393;
+          font-size: 28px;
+          margin-bottom: 20px;
+        }
+        :nth-child(3) {
           font-weight: 600;
         }
       }
-    }
-    .about {
-      margin-top: 50px;
-      color: #333;
-      > h1 {
-        font-weight: 600;
-        color: #397393;
-        font-size: 28px;
-        margin-bottom: 20px;
-      }
-      :nth-child(3) {
-        font-weight: 600;
-      }
-    }
-    .contact {
-      width: 75%;
-      margin-top: 50px;
-      color: #333;
-      > h1 {
-        font-weight: 600;
-        color: #397393;
-        font-size: 28px;
-        margin-bottom: 20px;
-      }
-      &Form {
-        border: 2px solid #397393;
-        box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
-        border-radius: 10px;
-        background-color: #ffffff;
-        display: grid;
-        gap: 1px;
-        grid-template-columns: 200px 1fr;
-        overflow: hidden;
-        margin-bottom: 100px;
-        font-size: 14px;
-        > div {
-          padding: 5px;
+      .contact {
+        width: 75%;
+        margin-top: 50px;
+        color: #333;
+        > h1 {
+          font-weight: 600;
+          color: #397393;
+          font-size: 28px;
+          margin-bottom: 20px;
         }
-        > :nth-of-type(4n-2),
-        > :nth-of-type(4n-3) {
-          background-color: #eceaf0;
-        }
-        > :nth-of-type(4n-1),
-        > :nth-of-type(4n) {
-          background-color: #bfbfbf;
+        &Form {
+          border: 2px solid #397393;
+          box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
+          border-radius: 10px;
+          background-color: #ffffff;
+          display: grid;
+          gap: 1px;
+          grid-template-columns: 200px 1fr;
+          overflow: hidden;
+          margin-bottom: 100px;
+          font-size: 14px;
+          > div {
+            padding: 5px;
+          }
+          > :nth-of-type(4n-2),
+          > :nth-of-type(4n-3) {
+            background-color: #eceaf0;
+          }
+          > :nth-of-type(4n-1),
+          > :nth-of-type(4n) {
+            background-color: #bfbfbf;
+          }
         }
       }
     }
