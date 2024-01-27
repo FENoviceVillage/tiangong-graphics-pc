@@ -18,7 +18,9 @@ function ProductPopup() {
 
   return (
     <div className={styles.popup}>
-      {
+      <div className={styles.triangle} />
+      <div className={styles.content}>
+        {
         appStore.products.map(item => (
           <div
             className={classNames({
@@ -31,6 +33,7 @@ function ProductPopup() {
           </div>
         ))
       }
+      </div>
     </div>
   )
 }
