@@ -19,7 +19,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
     a {
+      display: block;
       color: #494949;
       font-size: 20px;
       font-weight: 400;
