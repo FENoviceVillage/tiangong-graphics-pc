@@ -1,0 +1,25 @@
+.popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  gap: 21px;
+  padding-top: 28px;
+  padding-bottom: 24px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #054b72;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 8px 8px 18px -3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  &Active {
+    color: #361e5e;
+  }
+}

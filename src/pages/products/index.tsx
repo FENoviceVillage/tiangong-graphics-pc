@@ -1,9 +1,11 @@
-import React from 'react'
-import style from './index.module.scss'
-import FeaturesCard from './components/featurescard'
+import { useParams } from 'react-router-dom'
 import FeaturesTitle from './components/featuresTitle'
+import FeaturesCard from './components/featurescard'
+import style from './index.module.scss'
 
 function Products() {
+  const { category } = useParams()
+  console.log(category)
   return (
     <div className={style.content}>
       <div className={style.topShow}>

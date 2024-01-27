@@ -1,12 +1,11 @@
-import { lazy } from 'react'
 import { Navigate, createBrowserRouter } from 'react-router-dom'
 import App from '../App'
+import About from '@/pages/about'
+import Dynamic from '@/pages/dynamic'
 import Home from '@/pages/home'
+import Instructions from '@/pages/instructions'
 import Products from '@/pages/products'
 import Quote from '@/pages/quote'
-import Dynamic from '@/pages/dynamic'
-import About from '@/pages/about'
-import Instructions from '@/pages/instructions'
 
 const router = createBrowserRouter([
   {
@@ -25,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         id: '/products',
-        path: '/products',
+        path: '/products/:category',
         element: <Products />,
       },
       {

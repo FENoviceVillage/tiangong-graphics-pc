@@ -5,7 +5,7 @@ export interface TableItem {
   id: number
   title: string
   desc: string
-  time: string | number
+  time: string
   img: string
   url?: string
 }

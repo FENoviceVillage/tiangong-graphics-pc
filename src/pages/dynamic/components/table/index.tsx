@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
 import Pagination from 'rc-pagination'
-import styles from './index.module.scss'
+import { useEffect, useState } from 'react'
 import type { TableItem } from './components/index'
 import DynamicTableItem from './components/index'
+import styles from './index.module.scss'
 import './rc-pagination.css'
 
 interface TableData {
