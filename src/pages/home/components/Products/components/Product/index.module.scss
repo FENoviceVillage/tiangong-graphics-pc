@@ -1,0 +1,49 @@
+.product {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    @mixin center() {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    .large {
+      width: 853px;
+      height: 485px;
+      box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
+      .largeItem {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .small {
+      width: 421px;
+      height: 483px;
+      position: relative;
+      box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
+      color: #054b72;
+
+      .smallItem {
+        height: 100%;
+        .title{
+          padding-top: 100px;
+          font-size: 20px;
+          font-weight:600;
+          text-align: center;
+        }
+        .itemText {
+          width: 336px;
+          height: 128px;
+          position: absolute;
+          font-size: 16px;
+          font-family: Source Han Sans SC;
+          font-weight: 500;
+          @include center();
+        }
+      }
+    }
+  }

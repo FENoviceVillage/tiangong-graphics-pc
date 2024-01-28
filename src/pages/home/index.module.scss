@@ -123,67 +123,18 @@
       background: url(../../assets/img/home/home_ic_line.png) no-repeat;
       background-size: 100% 100%;
     }
+    // .footerVedio {
+    //   width: 1280px;
+    //   height: 485px;
+    //   @include img(url(../../assets/img/home/home_card_video_big.png));
 
-    .product {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-
-      .large {
-        width: 853px;
-        height: 485px;
-        // padding: 12px 20px 23px 12px;
-        // border: dashed rgb(201, 201, 201) 1px;
-
-        .largeItem {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          @include img();
-
-          .unplay {
-            @include center();
-            width: 75px;
-            height: 75px;
-          }
-        }
-      }
-
-      .small {
-        width: 421px;
-        height: 483px;
-        position: relative;
-
-        .smallItem {
-          height: 100%;
-          @include img(url(../../assets/img/home/home_card_characters.png));
-
-          .itemText {
-            width: 336px;
-            height: 128px;
-            position: absolute;
-            font-size: 16px;
-            font-family: Source Han Sans SC;
-            font-weight: 500;
-            color: #054b72;
-            @include center();
-          }
-        }
-      }
-    }
-
-    .footerVedio {
-      width: 1280px;
-      height: 485px;
-      @include img(url(../../assets/img/home/home_card_video_big.png));
-
-      .play {
-        margin-top: 195px;
-        margin-left: 249px;
-        width: 75px;
-        height: 75px;
-      }
-    }
+    //   .play {
+    //     margin-top: 195px;
+    //     margin-left: 249px;
+    //     width: 75px;
+    //     height: 75px;
+    //   }
+    // }
 
     .more {
       margin-top: 30px;
@@ -302,108 +253,120 @@
       justify-content: flex-start;
       margin-top: 160px;
       margin-left: 317px;
-    }
-  }
-
-  .footer {
-    height: 594px;
-    background: #e3f6fe;
-
-    .title {
-      padding-top: 75px;
-      text-align: center;
-      height: 24px;
-      font-size: 24px;
-      font-family: Source Han Sans SC;
-      font-weight: 500;
-      color: #000000;
-      line-height: 28px;
-    }
-
-    .titleBar {
-      text-align: center;
-      width: 100%;
-      padding-bottom: 44px;
-
-      .bar {
-        display: inline-block;
-        width: 96px;
-        height: 2px;
-        background: #c1d9e7;
-        box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
-      }
-    }
-
-    /* 容器样式 */
-    .form-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      /* 两列等宽 */
-      grid-gap: 28px;
-      /* 格子间隙 */
-      width: 736px;
-      /* 最大宽度，根据需要调整 */
-      margin: 0 auto;
-      /* 水平居中 */
-      padding: 8px;
-    }
-
-    /* 输入框样式 */
-    .form-container input,
-    textarea {
-      all: unset;
-      /* 清除默认样式 */
-      padding: 8px;
-      /* 内边距 */
-      background-color: #95bbca;
+      margin-bottom: 60px;
       box-sizing: border-box;
-      box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
-      /* 盒模型 */
     }
 
-    /* 按钮样式 */
-    .form-container button {
+    button {
       all: unset;
-      /* 清除默认样式 */
-      width: 128px;
-      height: 38px;
-      font-size: 14px;
-      box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
-      /* 内边距 */
-      background-color: #95bbca;
-      text-align: center;
+      width: 160px;
+      height: 47px;
+      font-size: 16px;
+      background: #95bbca;
+      border-radius: 5px;
       color: #ffffff;
-      /* 文本居中 */
-      cursor: pointer;
-    }
-
-    @mixin full() {
-      grid-column: 1 / -1;
-    }
-
-    /* 单独设置第三行的输入框占满整行 */
-    .form-container .full-row {
-      @include full();
-      height: 99px;
-    }
-
-    .form-container .footerText {
-      @include full();
-      padding: 0;
-      margin-top: -4px;
-      margin-bottom: 16px;
-      height: 11px;
-      font-size: 11px;
-      font-family: Source Han Sans SC;
-      font-weight: 500;
-      color: #5f5f5f;
-    }
-
-    /* 占位符样式 */
-    .form-container input::placeholder,
-    textarea::placeholder {
-      color: #ffffff;
-      font-size: 14px;
     }
   }
+
+  // .footer {
+  //   height: 594px;
+  //   background: #e3f6fe;
+
+  //   .title {
+  //     padding-top: 75px;
+  //     text-align: center;
+  //     height: 24px;
+  //     font-size: 24px;
+  //     font-family: Source Han Sans SC;
+  //     font-weight: 500;
+  //     color: #000000;
+  //     line-height: 28px;
+  //   }
+
+  //   .titleBar {
+  //     text-align: center;
+  //     width: 100%;
+  //     padding-bottom: 44px;
+
+  //     .bar {
+  //       display: inline-block;
+  //       width: 96px;
+  //       height: 2px;
+  //       background: #c1d9e7;
+  //       box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
+  //     }
+  //   }
+
+  //   /* 容器样式 */
+  //   .form-container {
+  //     display: grid;
+  //     grid-template-columns: repeat(2, 1fr);
+  //     /* 两列等宽 */
+  //     grid-gap: 28px;
+  //     /* 格子间隙 */
+  //     width: 736px;
+  //     /* 最大宽度，根据需要调整 */
+  //     margin: 0 auto;
+  //     /* 水平居中 */
+  //     padding: 8px;
+  //   }
+
+  //   /* 输入框样式 */
+  //   .form-container input,
+  //   textarea {
+  //     all: unset;
+  //     /* 清除默认样式 */
+  //     padding: 8px;
+  //     /* 内边距 */
+  //     background-color: #95bbca;
+  //     box-sizing: border-box;
+  //     box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
+  //     /* 盒模型 */
+  //   }
+
+  //   /* 按钮样式 */
+  //   .form-container button {
+  //     all: unset;
+  //     /* 清除默认样式 */
+  //     width: 128px;
+  //     height: 38px;
+  //     font-size: 14px;
+  //     box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
+  //     /* 内边距 */
+  //     background-color: #95bbca;
+  //     text-align: center;
+  //     color: #ffffff;
+  //     /* 文本居中 */
+  //     cursor: pointer;
+  //   }
+
+  //   @mixin full() {
+  //     grid-column: 1 / -1;
+  //   }
+
+  //   /* 单独设置第三行的输入框占满整行 */
+  //   .form-container .full-row {
+  //     @include full();
+  //     height: 99px;
+  //   }
+
+  //   .form-container .footerText {
+  //     @include full();
+  //     padding: 0;
+  //     margin-top: -4px;
+  //     margin-bottom: 16px;
+  //     height: 11px;
+  //     font-size: 11px;
+  //     font-family: Source Han Sans SC;
+  //     font-weight: 500;
+  //     color: #5f5f5f;
+  //   }
+
+  //   /* 占位符样式 */
+  //   .form-container input::placeholder,
+  //   textarea::placeholder {
+  //     color: #ffffff;
+  //     font-size: 14px;
+  //   }
+  // }
 }
