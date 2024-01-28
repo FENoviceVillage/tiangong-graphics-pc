@@ -1,4 +1,4 @@
-import VedioWithImg from '../VedioWithImg'
+import VideoWithImg from '../VideoWithImg'
 import styles from './index.module.scss'
 
 export default function Index(props: { data: any }) {
@@ -7,7 +7,7 @@ export default function Index(props: { data: any }) {
   return (
     <div className={styles.box}>
       <div className={styles.top}>
-        <VedioWithImg imgSrc={image} vedioSrc={url} hasControl />
+        <VideoWithImg imgSrc={image} videoSrc={url} hasControl />
       </div>
       <div className={styles.bottom}>{title}</div>
     </div>

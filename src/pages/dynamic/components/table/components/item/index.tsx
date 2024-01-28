@@ -1,4 +1,5 @@
 import styles from './index.module.scss'
+import VideoWithImg from '@/pages/home/components/VideoWithImg'
 import TimeIcon from '@/assets/img/dynamic/tiangong-time-icon.png'
 
 export interface TableItem {
@@ -7,10 +8,11 @@ export interface TableItem {
   desc: string
   time: string
   img: string
-  url?: string
+  video?: string
 }
 
 interface Props {
+
   data: TableItem
 }
 
@@ -25,11 +27,20 @@ function DynamicTableItem(props: Props) {
           {data.desc}
         </div>
         <div className={styles.itemContentTime}>
+
           <img src={TimeIcon} className={styles.itemContentTimeIcon} />
           <div className={styles.itemContentTimeDesc}>{data.time}</div>
         </div>
       </div>
-      <img src={data.img} className={styles.itemImg} />
+      {
+       data.video
+         ? (
+           <div className={styles.itemImg}>
+             <VideoWithImg imgSrc={data.img} videoSrc={data.video} hasControl />
+           </div>
+           )
+         : <img src={data.img} className={styles.itemImg} />
+      }
     </div>
   )
 }

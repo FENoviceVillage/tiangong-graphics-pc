@@ -1,19 +1,19 @@
-import VedioWithImg from '../../../VedioWithImg'
+import VideoWithImg from '../../../VideoWithImg'
 import styles from './index.module.scss'
 
 interface Props {
-  isVedioleft?: boolean
+  isVideoleft?: boolean
   data: Record<string, any> | any
 }
 
 function Index(props: Props) {
-  const { isVedioleft = true, data = {} } = props
+  const { isVideoleft = true, data = {} } = props
 
   return (
     <>
-      <div className={styles.product} style={{ flexDirection: isVedioleft ? 'row' : 'row-reverse' }}>
+      <div className={styles.product} style={{ flexDirection: isVideoleft ? 'row' : 'row-reverse' }}>
         <div className={styles.large}>
-          <VedioWithImg vedioSrc={data?.video} imgSrc={data?.image} />
+          <VideoWithImg videoSrc={data?.video} imgSrc={data?.image} />
         </div>
         <div className={styles.small}>
           <div className={styles.smallItem}>

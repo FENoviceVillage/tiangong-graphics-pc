@@ -1,10 +1,10 @@
-import { useAppStore } from '@/store'
 import rightBottom from '../../assets/img/home/home_pic_logo.png'
 import leftTop from '../../assets/img/home/home_pic_logo2.png'
 import NewsList from './components/NewsList'
 import Products from './components/Products'
-import SomeVedioDetail from './components/SomeVedioDetail'
+import SomeVideoDetail from './components/SomeVideoDetail'
 import styles from './index.module.scss'
+import { useAppStore } from '@/store'
 
 function Index() {
   const videos = useAppStore(state => state.videos)
@@ -23,7 +23,7 @@ function Index() {
         </div>
         <div className={styles.slideBox}>
           <div className={styles.slide}></div>
-          <div className={styles.vedioPlay}></div>
+          <div className={styles.VideoPlay}></div>
           <div className={styles.slide}></div>
           <div className={styles.slide}></div>
         </div>
@@ -58,12 +58,12 @@ function Index() {
           </div>
         </div>
       </div>
-      <div className={styles.someVedio}>
+      <div className={styles.someVideo}>
         <div className={styles.title}>相关视频</div>
-        <div className={styles.vedioBox}>
+        <div className={styles.VideoBox}>
           {
            videos.map((item) => {
-             return <SomeVedioDetail key={item?.id} data={item?.attributes} />
+             return <SomeVideoDetail key={item?.id} data={item?.attributes} />
            })
           }
         </div>

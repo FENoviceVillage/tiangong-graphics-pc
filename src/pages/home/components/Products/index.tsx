@@ -8,7 +8,7 @@ function Index() {
     <div className={styles.flex}>
       {
         products.map((product, index) => {
-          return index % 2 === 0 ? <Product key={product.id} data={product?.attributes} /> : <Product key={product.id} data={product?.attributes} isVedioleft={false} />
+          return index % 2 === 0 ? <Product key={product.id} data={product?.attributes} /> : <Product key={product.id} data={product?.attributes} isVideoleft={false} />
         })
       }
     </div>
