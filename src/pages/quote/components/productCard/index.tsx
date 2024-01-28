@@ -9,14 +9,13 @@ import magnifierIcon from '@/assets/img/quote/magnifier.png'
 // 导入申请试用图标
 import trialIcon from '@/assets/img/quote/apply.png'
 
-interface Props { }
-
-function ProductCard(props: Props) {
+function ProductCard(props: any) {
+  const productData = props?.Product?.attributes
   return (
     <div className={styles.card}>
       <aside>
         <div className={styles.left}>
-          <img src={product} alt="产品图片" />
+          <img src={productData.smallimage} alt="产品图片" />
           <div style={{ padding: '0 12px' }}>
 
             <div className={styles.price}>
@@ -33,7 +32,7 @@ function ProductCard(props: Props) {
         </div>
       </aside>
       <main>
-        <Product />
+        <Product Data={productData} />
       </main>
     </div>
   )

@@ -19,7 +19,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    > a {
+
+    a {
+      display: block;
       color: #494949;
       font-size: 20px;
       font-weight: 400;
@@ -29,5 +31,9 @@
       color: #361e5e !important;
       text-decoration: underline;
     }
+  }
+
+  &Product {
+    position: relative;
   }
 }

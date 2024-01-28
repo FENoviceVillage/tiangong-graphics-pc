@@ -9,6 +9,12 @@ interface Meta {
   pagination: Pagination
 }
 
+interface RequestParams {
+  'pagination[page]'?: number
+  'pagination[pageSize]'?: number
+  'pagination[withCount]'?: number
+}
+
 interface ProductResponse {
   data: ProductItem[]
   meta: Meta

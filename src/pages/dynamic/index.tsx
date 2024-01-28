@@ -1,11 +1,39 @@
-import React from 'react'
-import styles from './index.module.scss'
-import DynamicTable from './components/table/index'
+import dayjs from 'dayjs'
 import DynamicCategory from './components/category'
+import DynamicTable from './components/table/index'
+import styles from './index.module.scss'
 import ContactUs from '@/components/contactUs/index'
-import { getNewsInfo, getProductsInfo, getVideosInfo } from '@/api/request'
 
 function Dynamic() {
+  const getVideosInfo = async (params: RequestParams) => {
+    const res = await window.$.get<VideoResponse, RequestParams>(params, { url: '/api/videos' })
+    return {
+      data: res.data.map(item => ({
+        id: item.id,
+        title: item.attributes.title,
+        desc: item.attributes.description,
+        time: dayjs(item.attributes.updatedAt).format('YYYY-MM-DD HH:mm:ss'),
+        img: item.attributes.image,
+        video: item.attributes.url,
+      })),
+      pagination: res.meta.pagination,
+    }
+  }
+
+  const getNewsInfo = async (params: RequestParams) => {
+    const res = await window.$.get<NewsResponse, RequestParams>(params, { url: '/api/news' })
+    return {
+      data: res.data.map(item => ({
+        id: item.id,
+        title: item.attributes.title,
+        desc: item.attributes.content,
+        time: dayjs(item.attributes.updatedAt).format('YYYY-MM-DD HH:mm:ss'),
+        img: item.attributes.image,
+      })),
+      pagination: res.meta.pagination,
+    }
+  }
+
   return (
     <>
       <div className={styles.banner}>
@@ -14,8 +42,8 @@ function Dynamic() {
       </div>
       <div className={styles.body}>
         <div className={styles.bodyMain}>
-          <DynamicTable title="相关视频"></DynamicTable>
-          <DynamicTable title="新闻资讯"></DynamicTable>
+          <DynamicTable title="相关视频" service={getVideosInfo}></DynamicTable>
+          <DynamicTable title="新闻资讯" service={getNewsInfo}></DynamicTable>
         </div>
         <div className={styles.bodyAside}>
           <DynamicCategory></DynamicCategory>

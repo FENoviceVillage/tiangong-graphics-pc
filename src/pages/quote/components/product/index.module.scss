@@ -10,17 +10,26 @@
     font-size: 14px;
     font-family: Source Han Sans SC;
     font-weight: 400;
-    color: #E94F2C;
+    color: #e94f2c;
     line-height: 28px;
   }
-
+  .smallTitle {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 400px;
+  }
   .nodes {
     display: flex;
     flex-wrap: wrap;
 
     .node {
-      display: flex;
-      width: 50%;
+      > div {
+        width: 200px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
     }
 
     .explain {
@@ -31,5 +40,4 @@
       line-height: 28px;
     }
   }
-
 }

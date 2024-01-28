@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './index.module.scss'
 import PublicAccount from '@/assets/img/contactUs/tiangong-public-account.png'
 

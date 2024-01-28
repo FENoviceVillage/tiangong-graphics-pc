@@ -5,10 +5,11 @@ import styles from './index.module.scss'
 import Instruction from './components/instruction'
 import logoIcon from '@//assets/img/Instructions/logo.png'
 import myIcon from '@//assets/img/Instructions/symbol.png'
+import { useAppStore } from '@/store'
 
-interface Props {}
+function Instructions() {
+  const appStore = useAppStore()
 
-function Instructions(props: Props) {
   return (
     <div className={styles.main}>
       <div className={styles.layout}>
@@ -21,12 +22,11 @@ function Instructions(props: Props) {
             </header>
 
             <article>
-              <Instruction></Instruction>
-              <Instruction></Instruction>
-              <Instruction></Instruction>
-              <Instruction></Instruction>
-              <Instruction></Instruction>
-              <Instruction></Instruction>
+              {
+                appStore.products.map((item, index) =>
+                  <Instruction key={index} Data={item} />,
+                )
+              }
             </article>
           </main>
         </div>

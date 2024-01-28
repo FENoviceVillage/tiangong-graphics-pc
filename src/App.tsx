@@ -2,6 +2,7 @@ import PageBody from '@/layout/page-body'
 import PageFooter from '@/layout/page-footer'
 import PageHeader from '@/layout/page-header'
 import { useEffect } from 'react'
+import './assets/styles/globals.scss'
 import { useAppStore } from './store'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     appStore.getVideosInfo()
     appStore.getNewsInfo()
   }, [])
+
   return (
     <>
       <PageHeader></PageHeader>

@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './index.module.scss'
 import CompanyDynamic from '@/assets/img/dynamic/tiangong-company-dynamic.png'
 import ImplementationCase from '@/assets/img/dynamic/tiangong-implementation-case.png'
