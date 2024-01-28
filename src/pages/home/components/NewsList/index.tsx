@@ -1,18 +1,23 @@
 import pic from '../../../../assets/img/home/方向箭头.png'
 import styles from './index.module.scss'
 
-export default function Index(props: { style?: any }) {
-  const { style } = props
+export default function Index(props: { data: any, index: number }) {
+  const { data, index } = props
+  const { title, brief, image } = data
+  const style = { transform: 'translateY(-46px)' }
   return (
-    <div className={styles.box} style={style}>
-      <div className={styles.img}></div>
-
-      <div className={styles.textBox}>
+    // @ts-expect-error
+    <div className={styles.box} style={index === 1 ? style : null}>
+      <div className={styles.img}>
+        <img src={image} alt="" />
+      </div>
+      {/* @ts-expect-error */}
+      <div className={styles.textBox} style={index === 1 ? { backgroundColor: '#95BBCA', color: '#ffffff', boxShadow: '0px 6px 5px 0px rgba(149, 187, 202, 1)' } : null}>
         <div className={styles.time}>
-          2023-12-19
+          {title}
         </div>
         <div className={styles.text}>
-          从基于 occ内核会对一些模型无法测量准确的情况， 如何提高测量精度、压缩可视化文件大小?
+          {brief}
         </div>
         <button className={styles.detail}>
           <div className={styles.flexbox}>
