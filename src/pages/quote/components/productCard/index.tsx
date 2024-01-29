@@ -16,7 +16,9 @@ function ProductCard(props: any) {
     <div className={styles.card}>
       <aside>
         <div className={styles.left}>
-          <VideoWithImg imgSrc={productData.smallimage} videoSrc={productData.video} hasControl />
+          <div className={styles.video}>
+            <VideoWithImg imgSrc={productData.smallimage} videoSrc={productData.video} hasControl />
+          </div>
           <div style={{ padding: '0 12px' }}>
             <div className={styles.price}>
               <div className={styles.btn1}>

@@ -6,6 +6,7 @@ module.exports = {
       viewportUnit: 'vw',
       selectorBlackList: ['.ignore', '.hairlines', '.am'],
       minPixelValue: 1,
+      propList: ['!*'],
       mediaQuery: false,
     },
   },
