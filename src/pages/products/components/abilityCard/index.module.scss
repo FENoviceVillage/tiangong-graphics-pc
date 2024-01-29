@@ -1,0 +1,54 @@
+@import '../../../../assets/styles/mixins.scss';
+
+.card {
+  @include flex-cc-c;
+  position: relative;
+  width: 318px;
+  height: 346px;
+  background-color: #b5d3e5;
+  box-shadow: 0px 4px 5px 0px rgba(133, 133, 159, 0.35);
+  border-radius: 10px;
+  color: #397393;
+  z-index: 100;
+  &Img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 23px;
+  }
+  &Pushpins {
+    position: absolute;
+    width: 88px;
+    height: 88px;
+    top: -44px;
+    z-index: -1;
+  }
+  > h3 {
+    font-size: 62px;
+    font-weight: 600;
+    text-align: center;
+  }
+  span {
+    margin-top: 68px;
+    font-size: 15px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+  }
+}
+.card::before {
+  content: '';
+  width: 342px;
+  height: 346px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: 8px;
+  z-index: -1;
+  box-shadow: 0px 4px 5px 0px rgba(133, 133, 159, 0.35);
+}
+.card:hover {
+  top: -5px;
+}

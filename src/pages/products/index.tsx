@@ -3,6 +3,7 @@ import { includes } from 'lodash'
 import FeaturesTitle from './components/featuresTitle'
 import FeaturesCard from './components/featurescard'
 import style from './index.module.scss'
+import AbilityCard from './components/abilityCard'
 import { useAppStore } from '@/store'
 
 function Products() {
@@ -23,7 +24,7 @@ function Products() {
     {
       midimage: '../../../assets/img/products/lightning.png',
       featuresTitle: '快速反应',
-      subtitle: '模型解析速度行业领先',
+      subtitle: '自动识别，快捷高效',
     },
     {
       midimage: '../../../assets/img/products/symbol.png',
@@ -31,8 +32,20 @@ function Products() {
       subtitle: '数据具有安全性、高精度 （曲面测量数据达到1微米）',
     },
   ]
-
-  const { title, video, shortdescription } = Data[Number(category) - 1]?.attributes
+  const ability = [
+    {
+      abilityTitle: '3D标注',
+      abilitySubtitle: '直观 精准多维定义',
+    },
+    {
+      abilityTitle: '特征识别',
+      abilitySubtitle: '自动识别，快捷高效',
+    },
+    {
+      abilityTitle: '制造成本 分析',
+    },
+  ]
+  const { title, video, shortdescription } = Data[Number(category) - 1]?.attributes || {}
 
   return (
     <div className={style.content}>
@@ -72,12 +85,17 @@ function Products() {
         <p>工业3D模型解析平台提供了API接口，实现客户快速的在线浏览3d模型、测量、3D标注、特征识别、制造成本分析等功能</p>
         <div className={style.featureCard}>
           {
-            FeaturesData.map((item, index) => <FeaturesCard key={index} Featuresimg={item.midimage} title={item.featuresTitle} subtitle={item.subtitle} type={0} />)
+            FeaturesData.map((item, index) => <FeaturesCard key={index} Featuresimg={item.midimage} title={item.featuresTitle} subtitle={item.subtitle} />)
           }
         </div>
         <FeaturesTitle title="高级功能" />
         <p>工业3D模型解析平台提供了API接口，实现客户快速的在线浏览3d模型、测量、3D标注、特征识别、制造成本分析等功能</p>
-        <FeaturesCard type={1} />
+        <div className={style.featureCard}>
+          {
+          ability.map((item, index) => <AbilityCard key={index} abilityTitle={item.abilityTitle} abilitySubtitle={item.abilitySubtitle} />)
+        }
+        </div>
+
       </div>
       <div className={style.parse}>
         <h1>工业3d模型解析平台</h1>

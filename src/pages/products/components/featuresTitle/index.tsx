@@ -11,10 +11,8 @@ function FeaturesTitle(props: props) {
   return (
     <div className={style.features}>
       <img src={Shading} alt="标志" className={style.featuresShading} />
-      {/* <div className={style.featuresTitle}> */}
       <h2>{title}</h2>
       <img src={Symbol} alt="符号" className={style.featuresSymbol} />
-      {/* </div> */}
     </div>
   )
 }
