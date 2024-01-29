@@ -1,13 +1,13 @@
+import classNames from 'classnames'
 import pic from '../../../../assets/img/home/方向箭头.png'
+import pic2 from '../../../../assets/img/home/方向箭头_white.png'
 import styles from './index.module.scss'
 
 export default function Index(props: { data: any, index: number }) {
   const { data, index } = props
   const { title, brief, image } = data
-  const style = { transform: 'translateY(-46px)' }
   return (
-    // @ts-expect-error
-    <div className={styles.box} style={index === 1 ? style : null}>
+    <div className={index === 1 ? classNames(styles.box, styles.transform) : styles.box}>
       <div className={styles.img}>
         <img src={image} alt="" />
       </div>
@@ -22,7 +22,7 @@ export default function Index(props: { data: any, index: number }) {
         <button className={styles.detail}>
           <div className={styles.flexbox}>
             <span>探索更多</span>
-            <img src={pic} alt="" />
+            <img src={index === 1 ? pic2 : pic} alt="" />
           </div>
         </button>
       </div>
