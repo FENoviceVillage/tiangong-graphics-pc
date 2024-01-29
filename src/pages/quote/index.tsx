@@ -8,13 +8,10 @@ import RelatedProducts from './components/relatedProducts'
 import { Top } from './components/top'
 
 export const Quote: React.FC = () => {
-  const [bbbbbb, $bbbbbb] = useState()
   return (
     <div className={styles.layout}>
       <div className={styles.center}>
         <div className={styles.main}>
-          {/* <Header /> */}
-          {/* <Main /> */}
           <article>
             <Top />
             <ProductCardList />

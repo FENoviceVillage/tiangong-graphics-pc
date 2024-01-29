@@ -1,4 +1,5 @@
 import styles from './index.module.scss'
+import VideoWithImg from '@/pages/home/components/VideoWithImg'
 
 interface Props {
   isFirst?: boolean
@@ -6,7 +7,7 @@ interface Props {
 }
 
 function Instruction(props: Props) {
-  const { description, title, video } = props?.Data?.attributes
+  const { description, title, video, smallimage } = props?.Data?.attributes
 
   return (
     <div className={styles.main}>
@@ -20,7 +21,7 @@ function Instruction(props: Props) {
       }
 
       <aside>
-        <video src={video}></video>
+        <VideoWithImg imgSrc={smallimage} videoSrc={video} hasControl />
       </aside>
       <div className={styles.context}>
         <div className={styles.header}>{title}</div>
