@@ -34,9 +34,10 @@ a {
     justify-content: center;
     align-items: center;
     background: #e1e0e3;
-    padding: 42px 515px;
+    padding: 42px 0;
     width: 100%;
     .products {
+      width: 890px;
       color: #333;
       > h1 {
         font-weight: 600;
@@ -52,6 +53,7 @@ a {
       }
     }
     .about {
+      width: 890px;
       margin-top: 50px;
       color: #333;
       > h1 {
