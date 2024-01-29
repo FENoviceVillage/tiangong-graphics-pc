@@ -1,13 +1,24 @@
-import React from 'react'
-import Lightning from '../../../../assets/img/products/lightning.png'
+// import React from 'react'
+
+// import Lightning from '../../../../assets/img/products/lightning.png'
+import Title from 'antd/es/typography/Title'
+import { useEffect, useState } from 'react'
 import style from './index.module.scss'
 
-function FeaturesCard() {
+interface props {
+  Featuresimg?: string
+  title?: string
+  subtitle?: string
+
+}
+function FeaturesCard(props: props) {
+  const { title, Featuresimg, subtitle } = props
+
   return (
     <div className={style.card}>
-      <img src={Lightning} alt="" className={style.cardImg} />
-      <h3>快速反应</h3>
-      <span>模型解析速度行业领先</span>
+      <img src={Featuresimg} alt="特点" className={style.cardImg} />
+      <h3>{title}</h3>
+      <span>{subtitle}</span>
     </div>
   )
 }

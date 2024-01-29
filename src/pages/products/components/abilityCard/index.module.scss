@@ -3,8 +3,8 @@
 .card {
   @include flex-cc-c;
   position: relative;
-  width: 206px;
-  height: 224px;
+  width: 318px;
+  height: 346px;
   background-color: #b5d3e5;
   box-shadow: 0px 4px 5px 0px rgba(133, 133, 159, 0.35);
   border-radius: 10px;
@@ -23,11 +23,12 @@
     z-index: -1;
   }
   > h3 {
-    font-size: 18px;
-    margin-bottom: 9px;
+    font-size: 62px;
     font-weight: 600;
+    text-align: center;
   }
   span {
+    margin-top: 68px;
     font-size: 15px;
     height: 50px;
     text-align: center;
@@ -36,8 +37,8 @@
 }
 .card::before {
   content: '';
-  width: 221px;
-  height: 224px;
+  width: 342px;
+  height: 346px;
   background-color: #fff;
   border-radius: 10px;
   position: absolute;
