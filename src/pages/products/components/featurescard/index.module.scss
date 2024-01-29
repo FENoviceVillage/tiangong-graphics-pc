@@ -15,6 +15,13 @@
     height: 100px;
     margin-bottom: 23px;
   }
+  &Pushpins {
+    position: absolute;
+    width: 88px;
+    height: 88px;
+    top: -44px;
+    z-index: -1;
+  }
   > h3 {
     font-size: 18px;
     margin-bottom: 9px;
@@ -22,7 +29,9 @@
   }
   span {
     font-size: 15px;
-    // color: #fff;
+    height: 50px;
+    text-align: center;
+    display: flex;
   }
 }
 .card::before {

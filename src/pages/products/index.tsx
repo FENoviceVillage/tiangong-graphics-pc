@@ -1,22 +1,50 @@
 import { useParams } from 'react-router-dom'
+import { includes } from 'lodash'
 import FeaturesTitle from './components/featuresTitle'
 import FeaturesCard from './components/featurescard'
 import style from './index.module.scss'
+import { useAppStore } from '@/store'
 
 function Products() {
   const { category } = useParams()
-  console.log(category)
+  const appStore = useAppStore()
+  const Data = appStore.products
+  const FeaturesData = [
+    {
+      midimage: '~@/assets/img/products/Cloud.png',
+      featuresTitle: '轻量化应用',
+      subtitle: '可视化数据90%的压缩率',
+    },
+    {
+      midimage: '../../../assets/img/products/gear.png',
+      featuresTitle: '高性能',
+      subtitle: '大模型的渲染性能高 (专注于Web端工程图形渲染)',
+    },
+    {
+      midimage: '../../../assets/img/products/lightning.png',
+      featuresTitle: '快速反应',
+      subtitle: '模型解析速度行业领先',
+    },
+    {
+      midimage: '../../../assets/img/products/symbol.png',
+      featuresTitle: '测量功能丰富用',
+      subtitle: '数据具有安全性、高精度 （曲面测量数据达到1微米）',
+    },
+  ]
+
+  const { title, video, shortdescription } = Data[Number(category) - 1]?.attributes
+
   return (
     <div className={style.content}>
       <div className={style.topShow}>
-        <h2>工业3d模型解析平台</h2>
-        <span>网页上直接浏览3d模型，尺寸测量、3D标注、特征识别、制造成本分析</span>
+        <h2>{title}</h2>
+        <span>{shortdescription}</span>
         <div className={style.interactButton}>
           <button>申请试用</button>
           <button>联系报价</button>
         </div>
         <div className={style.video}>
-          <video src=""></video>
+          <video src={video}></video>
         </div>
         <div className={style.videoDetail}>
           <p>
@@ -40,17 +68,16 @@ function Products() {
         </div>
       </div>
       <div className={style.feature}>
-        <FeaturesTitle />
+        <FeaturesTitle title="产品特点" />
         <p>工业3D模型解析平台提供了API接口，实现客户快速的在线浏览3d模型、测量、3D标注、特征识别、制造成本分析等功能</p>
         <div className={style.featureCard}>
-          <FeaturesCard />
-          <FeaturesCard />
-          <FeaturesCard />
-          <FeaturesCard />
+          {
+            FeaturesData.map((item, index) => <FeaturesCard key={index} Featuresimg={item.midimage} title={item.featuresTitle} subtitle={item.subtitle} type={0} />)
+          }
         </div>
-        <FeaturesTitle />
+        <FeaturesTitle title="高级功能" />
         <p>工业3D模型解析平台提供了API接口，实现客户快速的在线浏览3d模型、测量、3D标注、特征识别、制造成本分析等功能</p>
-        <FeaturesCard />
+        <FeaturesCard type={1} />
       </div>
       <div className={style.parse}>
         <h1>工业3d模型解析平台</h1>
