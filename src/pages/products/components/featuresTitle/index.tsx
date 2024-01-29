@@ -1,5 +1,5 @@
 import React from 'react'
-import Shading from '../../../../assets/img/products/Shading.png'
+import Shading from '../../../../assets/img/products/RShading.png'
 import Symbol from '../../../../assets/img/products/symbol.png'
 import style from './index.module.scss'
 
