@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import ContactUs from '../../components/contactUs/index'
 import styles from './index.module.scss'
-import Header from './components/header'
-import Main from './components/main'
 import ProductCardList from './components/productCardList'
 import RelatedProducts from './components/relatedProducts'
 import { Top } from './components/top'

@@ -1,8 +1,3 @@
-// import React from 'react'
-
-// import Lightning from '../../../../assets/img/products/lightning.png'
-import Title from 'antd/es/typography/Title'
-import { useEffect, useState } from 'react'
 import style from './index.module.scss'
 
 interface props {
