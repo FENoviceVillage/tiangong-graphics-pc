@@ -1,7 +1,7 @@
 import Pagination from 'rc-pagination'
 import { useEffect, useState } from 'react'
-import type { TableItem } from './components/index'
-import DynamicTableItem from './components/index'
+import type { TableItem } from './components/item/index'
+import DynamicTableItem from './components/item/index'
 import styles from './index.module.scss'
 import './rc-pagination.css'
 
@@ -13,6 +13,7 @@ interface TableData {
 interface Props {
   title: string
   service: (params: RequestParams) => Promise<TableData>
+
 }
 
 function DynamicTable(props: Props) {

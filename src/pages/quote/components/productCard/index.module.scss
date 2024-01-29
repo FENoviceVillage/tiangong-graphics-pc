@@ -17,6 +17,7 @@
     img {
       width: 223px;
       height: 144px;
+      background-color: #dde1e2ff;
     }
 
     .price {
@@ -41,13 +42,14 @@
       .btn1 {
         width: 98px;
         height: 27px;
-        background: #28a745;
+        background: #2ab9f5ff;
         border-radius: 5px;
         margin-right: 7px;
         display: flex;
         align-items: center;
         justify-content: center;
         > img {
+          background-color: transparent;
           margin-right: 4px;
         }
         .text {
@@ -63,12 +65,13 @@
       .btn2 {
         width: 98px;
         height: 27px;
-        background: #f89406;
+        background: #f89406ff;
         border-radius: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
         > img {
+          background-color: transparent;
           margin-top: -2px;
           margin-right: 4px;
         }

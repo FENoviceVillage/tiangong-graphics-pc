@@ -18,11 +18,13 @@ function ProductPopup() {
 
   return (
     <div className={styles.popup}>
-      {
+      <div className={styles.triangle} />
+      <div className={styles.content}>
+        {
         appStore.products.map(item => (
           <div
             className={classNames({
-              [styles.popupActive]: String(item.id) === category,
+              [styles.contentActive]: String(item.id) === category,
             })}
             key={item.id}
             onClick={() => onClick(String(item.id))}
@@ -31,6 +33,7 @@ function ProductPopup() {
           </div>
         ))
       }
+      </div>
     </div>
   )
 }

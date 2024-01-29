@@ -29,6 +29,7 @@ function Dynamic() {
         desc: item.attributes.content,
         time: dayjs(item.attributes.updatedAt).format('YYYY-MM-DD HH:mm:ss'),
         img: item.attributes.image,
+
       })),
       pagination: res.meta.pagination,
     }

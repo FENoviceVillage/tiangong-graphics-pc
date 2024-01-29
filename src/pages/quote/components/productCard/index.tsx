@@ -8,6 +8,7 @@ import magnifierIcon from '@/assets/img/quote/magnifier.png'
 
 // 导入申请试用图标
 import trialIcon from '@/assets/img/quote/apply.png'
+import VideoWithImg from '@/pages/home/components/VideoWithImg'
 
 function ProductCard(props: any) {
   const productData = props?.Product?.attributes
@@ -15,9 +16,8 @@ function ProductCard(props: any) {
     <div className={styles.card}>
       <aside>
         <div className={styles.left}>
-          <img src={product} alt="产品图片" />
+          <VideoWithImg imgSrc={productData.smallimage} videoSrc={productData.video} hasControl />
           <div style={{ padding: '0 12px' }}>
-
             <div className={styles.price}>
               <div className={styles.btn1}>
                 <img src={magnifierIcon} alt="放大镜图标" />

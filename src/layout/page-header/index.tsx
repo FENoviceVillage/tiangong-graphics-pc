@@ -27,8 +27,8 @@ function PageHeader() {
         <div className={styles.headerProduct} onMouseEnter={onProductMouseEnter} onMouseLeave={onProductMouseLeave}>
           <NavLink to={`/products/${appStore.products[0]?.id}`} className={() => category ? styles.headerTabActive : ''}>产品</NavLink>
           {
-          productPopupVisible && <ProductPopup />
-         }
+            productPopupVisible && <ProductPopup />
+          }
         </div>
         <NavLink to="/quote" className={({ isActive }) => isActive ? styles.headerTabActive : ''}>报价</NavLink>
         <NavLink to="/instructions" className={({ isActive }) => isActive ? styles.headerTabActive : ''}>使用说明</NavLink>
