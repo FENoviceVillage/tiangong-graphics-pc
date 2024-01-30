@@ -42,9 +42,9 @@ a {
         font-weight: 600;
         color: #397393;
         font-size: 28px;
-        margin-bottom: 20px;
       }
       .productsDetails {
+        font-size: 14px;
         :nth-child(2n + 1) {
           margin: 10px 0;
           font-weight: 600;
@@ -63,6 +63,9 @@ a {
       :nth-child(3) {
         font-weight: 600;
       }
+      p {
+        font-size: 14px;
+      }
     }
     .contact {
       margin-top: 50px;
@@ -73,6 +76,7 @@ a {
         font-size: 28px;
         margin-bottom: 20px;
       }
+
       &Form {
         width: 850px;
         border: 2px solid #397393;
