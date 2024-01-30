@@ -22,7 +22,7 @@
       position: relative;
       width: 158px;
       height: 6px;
-      background: #000000;
+      background: #054b72;
       box-shadow: 0px 4px 0px 0px rgba(109, 135, 141, 0.6);
       opacity: 0.23;
       border-radius: 3px;
@@ -31,12 +31,11 @@
 
   &Body {
     width: 741px;
-    height: 889px;
+
     border: 1px solid #397393;
     padding: 38px 32px 0 32px;
 
     &Content {
-      height: 736px;
       display: flex;
       flex-direction: column;
       gap: 28px;
