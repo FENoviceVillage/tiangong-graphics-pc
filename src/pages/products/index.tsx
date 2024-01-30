@@ -1,33 +1,39 @@
 import { useParams } from 'react-router-dom'
 import { includes } from 'lodash'
+import VideoWithImg from '../home/components/VideoWithImg'
 import FeaturesTitle from './components/featuresTitle'
 import FeaturesCard from './components/featurescard'
 import style from './index.module.scss'
 import AbilityCard from './components/abilityCard'
 import { useAppStore } from '@/store'
+import Cloud from '@/assets/img/products/Cloud.png'
+import Gear from '@/assets/img/products/gear.png'
+import Lightning from '@/assets/img/products/lightning.png'
+import Ruler from '@/assets/img/products/ruler.png'
 
 function Products() {
   const { category } = useParams()
   const appStore = useAppStore()
   const Data = appStore.products
+
   const FeaturesData = [
     {
-      midimage: '~@/assets/img/products/Cloud.png',
+      midimage: Cloud,
       featuresTitle: '轻量化应用',
       subtitle: '可视化数据90%的压缩率',
     },
     {
-      midimage: '../../../assets/img/products/gear.png',
+      midimage: Gear,
       featuresTitle: '高性能',
       subtitle: '大模型的渲染性能高 (专注于Web端工程图形渲染)',
     },
     {
-      midimage: '../../../assets/img/products/lightning.png',
+      midimage: Lightning,
       featuresTitle: '快速反应',
       subtitle: '自动识别，快捷高效',
     },
     {
-      midimage: '../../../assets/img/products/symbol.png',
+      midimage: Ruler,
       featuresTitle: '测量功能丰富用',
       subtitle: '数据具有安全性、高精度 （曲面测量数据达到1微米）',
     },
@@ -45,7 +51,7 @@ function Products() {
       abilityTitle: '制造成本 分析',
     },
   ]
-  const { title, video, shortdescription } = Data[Number(category) - 1]?.attributes || {}
+  const { title, video, shortdescription, smallimage } = Data[Number(category) - 1]?.attributes || {}
 
   return (
     <div className={style.content}>
@@ -57,7 +63,7 @@ function Products() {
           <button>联系报价</button>
         </div>
         <div className={style.video}>
-          <video src={video}></video>
+          <VideoWithImg imgSrc={smallimage} videoSrc={video} hasControl />
         </div>
         <div className={style.videoDetail}>
           <p>
@@ -90,7 +96,7 @@ function Products() {
         </div>
         <FeaturesTitle title="高级功能" />
         <p>工业3D模型解析平台提供了API接口，实现客户快速的在线浏览3d模型、测量、3D标注、特征识别、制造成本分析等功能</p>
-        <div className={style.featureCard}>
+        <div className={style.featureCardN}>
           {
           ability.map((item, index) => <AbilityCard key={index} abilityTitle={item.abilityTitle} abilitySubtitle={item.abilitySubtitle} />)
         }

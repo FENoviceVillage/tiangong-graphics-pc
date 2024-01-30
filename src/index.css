@@ -144,3 +144,7 @@ textarea:focus {
 div {
   box-sizing: border-box;
 }
+
+body {
+  min-width: 1380px;
+}

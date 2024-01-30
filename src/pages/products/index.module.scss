@@ -76,6 +76,11 @@
     &Card {
       width: 1085px;
       @include flex-rc-sa;
+      margin-bottom: 176px;
+    }
+    &CardN {
+      width: 1285px;
+      @include flex-rc-sa;
     }
   }
   .parse {
