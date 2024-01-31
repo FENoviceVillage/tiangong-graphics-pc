@@ -5,8 +5,8 @@
   width: 100%;
   box-sizing: border-box;
   // background-image: url(../../../../assets/img/Instructions/border.png);
-  border-bottom: #E7D3C2 4px solid;
-  border-right:  #E7D3C2 4px solid;
+  border-bottom: #e7d3c2 4px solid;
+  border-right: #e7d3c2 4px solid;
   background-size: cover;
   background-color: #fff;
   background-position-y: bottom;
@@ -48,6 +48,10 @@
     margin-right: 30px;
 
     video {
+      width: 395px;
+      height: 217px;
+    }
+    img {
       width: 395px;
       height: 217px;
     }

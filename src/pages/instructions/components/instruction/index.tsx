@@ -21,7 +21,7 @@ function Instruction(props: Props) {
       }
 
       <aside>
-        <VideoWithImg imgSrc={smallimage} videoSrc={video} hasControl />
+        <VideoWithImg imgSrc={smallimage} videoSrc={video} hasControl isClickImgShowVedio />
       </aside>
       <div className={styles.context}>
         <div className={styles.header}>{title}</div>
