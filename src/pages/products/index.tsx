@@ -83,10 +83,10 @@ function Products() {
         </div>
         <div className={style.topLine}>
           <p>在线预览多种格式文件效果</p>
-          <a href="">tuo visual</a>
-          <a href="">SolidWorks</a>
-          <a href="">STP</a>
-          <a href="">CATIA</a>
+          <a href="javascript:">tuo visual</a>
+          <a href="javascript:">SolidWorks</a>
+          <a href="javascript:">STP</a>
+          <a href="javascript:">CATIA</a>
           <a onClick={ScrollRef}>查看格式清单</a>
         </div>
       </div>
