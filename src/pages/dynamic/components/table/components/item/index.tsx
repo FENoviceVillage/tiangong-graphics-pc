@@ -35,7 +35,7 @@ function DynamicTableItem(props: Props) {
        data.video
          ? (
            <div className={styles.itemImg}>
-             <VideoWithImg imgSrc={data.img} videoSrc={data.video} isClickImgShowVideo={true} hasControl />
+             <VideoWithImg imgSrc={data.img} videoSrc={data.video} isClickImgShowVideo hasControl isSmallVideo />
            </div>
            )
          : <img src={data.img} className={styles.itemImg} />
