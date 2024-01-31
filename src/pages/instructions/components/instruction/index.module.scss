@@ -4,8 +4,11 @@
   padding: 18px 12px;
   width: 100%;
   box-sizing: border-box;
-  background-image: url(../../../../assets/img/Instructions/border.png);
+  // background-image: url(../../../../assets/img/Instructions/border.png);
+  border-bottom: #E7D3C2 4px solid;
+  border-right:  #E7D3C2 4px solid;
   background-size: cover;
+  background-color: #fff;
   background-position-y: bottom;
   margin-bottom: 76px;
   position: relative;
