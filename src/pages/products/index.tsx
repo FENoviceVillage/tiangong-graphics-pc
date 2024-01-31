@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import { includes } from 'lodash'
+import { useRef } from 'react'
 import VideoWithImg from '../home/components/VideoWithImg'
 import FeaturesTitle from './components/featuresTitle'
 import FeaturesCard from './components/featurescard'
@@ -15,7 +15,7 @@ function Products() {
   const { category } = useParams()
   const appStore = useAppStore()
   const Data = appStore.products
-
+  /* 数据定义 */
   const FeaturesData = [
     {
       midimage: Cloud,
@@ -52,7 +52,11 @@ function Products() {
     },
   ]
   const { title, video, shortdescription, smallimage } = Data[Number(category) - 1]?.attributes || {}
-
+  /* 滚动效果 */
+  const myRef = useRef<any>(0)
+  const ScrollRef = () => {
+    myRef.current.scrollIntoView({ behavior: 'smooth' })
+  }
   return (
     <div className={style.content}>
       <div className={style.topShow}>
@@ -83,7 +87,7 @@ function Products() {
           <a href="">SolidWorks</a>
           <a href="">STP</a>
           <a href="">CATIA</a>
-          <a href="">查看格式清单</a>
+          <a onClick={ScrollRef}>查看格式清单</a>
         </div>
       </div>
       <div className={style.feature}>
@@ -121,7 +125,7 @@ function Products() {
           </p>
         </div>
       </div>
-      <div className={style.palyFree}>
+      <div className={style.palyFree} ref={myRef}>
         <div className={style.paidContent}>
           <div className={style.interact}>
             <div className={style.crowd}>
