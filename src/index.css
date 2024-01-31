@@ -88,6 +88,7 @@ video {
   font-weight: normal;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -102,15 +103,18 @@ nav,
 section {
   display: block;
 }
+
 ol,
 ul,
 li {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -118,14 +122,17 @@ q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 th,
 td {
   vertical-align: middle;
 }
+
 /* custom */
 a {
   outline: none;
@@ -133,18 +140,52 @@ a {
   text-decoration: none;
   -webkit-backface-visibility: hidden;
 }
+
 a:focus {
   outline: none;
 }
+
 input:focus,
 select:focus,
 textarea:focus {
   outline: -webkit-focus-ring-color auto 0;
 }
+
 div {
   box-sizing: border-box;
 }
 
 body {
   min-width: 1380px;
+}
+
+/* 请勿修改 */
+.slick-dots li {
+  display: inline-block;
+  height: 11px !important;
+  width: 11px !important;
+  border-radius: 50%;
+  background-color: #367091;
+  button {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    background-color: #367091 !important;
+  }
+}
+
+/* 修改指示点的样式 */
+
+/* 修改当前激活的指示点的样式 */
+.slick-dots li.slick-active {
+  /* background: #007bff !important; 设置激活状态的背景色 */
+  display: inline-block !important;
+  width: 39px !important;
+  height: 39px !important;
+  background-image: url('./assets/img/home/home_ic_slide.png');
+  background-color: unset !important;
+  background-size: 100% 100%;
+  button {
+    display: none;
+  }
 }
