@@ -16,12 +16,13 @@
     box-sizing: border-box;
     color: #054b72;
     background-color: #fff;
-    text-align: center;
     .time {
+      display:inline-block;
+      text-align: justify;
       padding-top: 55px;
       margin-bottom: 1px;
-      padding-left: 2px;
-      padding-right: 2px;
+      padding-left: 8px;
+      padding-right: 8px;
       font-size: 24px;
       font-family: Source Han Sans SC;
       font-weight: 500;
