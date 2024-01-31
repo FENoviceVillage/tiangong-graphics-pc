@@ -50,6 +50,8 @@
         @include center_p();
         flex-direction: column;
         padding: 64px 0;
+        border-bottom: #F0B183 solid 2px;
+        margin-bottom: 20px;
         article {
           font-size: 33px;
           font-family: PangMenZhengDao;
