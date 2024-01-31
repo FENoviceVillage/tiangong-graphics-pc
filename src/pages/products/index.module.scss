@@ -86,23 +86,30 @@
   .parse {
     background: #d8ecf4;
     @include flex-cc-c;
-    height: 40vh;
+    height: 537px;
     > h1 {
       font-size: 44px;
       font-family: Microsoft YaHei;
       font-weight: 400;
       color: #000000;
       line-height: 72px;
+      margin-bottom: 30px;
     }
-    > p {
-      font-size: 28px;
-      color: #5c5c5c;
-      > span {
+    div {
+      > p {
+        font-size: 28px;
+        color: #5c5c5c;
+        letter-spacing: 5px;
+        > a {
+          text-decoration: dashed;
+        }
+        > span {
+          color: #054b72;
+        }
+      }
+      :last-child {
         color: #054b72;
       }
-    }
-    :last-child {
-      color: #054b72;
     }
   }
   .palyFree {
@@ -119,6 +126,7 @@
           color: #397393;
           text-shadow: 0px 6px 5px rgba(133, 133, 159, 0.35);
           margin-bottom: 30px;
+
           > h3 {
             margin-bottom: 20px;
           }

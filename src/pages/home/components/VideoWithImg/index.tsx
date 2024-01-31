@@ -11,7 +11,7 @@ export default function Index(props: { videoSrc: string, imgSrc: string, hasCont
     setIsPlay(!isPlay)
     setTimeout(() => {
       ref?.current?.play()
-    }, 0);
+    }, 0)
   }
 
   const style = isSmallVideo ? { width: 31, height: 31 } : { width: 75, height: 75 }
