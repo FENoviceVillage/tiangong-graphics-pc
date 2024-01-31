@@ -1,41 +1,32 @@
 import rightBottom from '../../assets/img/home/home_pic_logo.png'
 import leftTop from '../../assets/img/home/home_pic_logo2.png'
+import Carousel from './components/Carousel'
 import NewsList from './components/NewsList'
 import Products from './components/Products'
 import SomeVideoDetail from './components/SomeVideoDetail'
 import styles from './index.module.scss'
 import { useAppStore } from '@/store'
-
+import { useNavigate } from 'react-router-dom'
 function Index() {
   const videos = useAppStore(state => state.videos)
   const news = useAppStore(state => state.news)
+  const nav = useNavigate()
+  const onClick = () => {
+    nav("/quote")
+  }
   return (
     <div className={styles.box}>
-      <div className={styles.homeTop}>
-        <div className={styles.text}>
-          <div>自研究高性能几何与图形算法</div>
-          <div>为构建工业3D应用程序</div>
-          <div>提供优选解决方案</div>
-        </div>
-        <div className={styles.btnBox}>
-          <button className={styles.btn}>申请试用</button>
-          <button className={styles.btn}>了解更多</button>
-        </div>
-        <div className={styles.slideBox}>
-          <div className={styles.slide}></div>
-          <div className={styles.VideoPlay}></div>
-          <div className={styles.slide}></div>
-          <div className={styles.slide}></div>
-        </div>
-      </div>
+      <Carousel />
       <div className={styles.productBox}>
         <div className={styles.header}>
         </div>
         <div className={styles.headerText}>核心产品</div>
         <div className={styles.line}></div>
         <Products />
-        <div className={styles.more}>查阅更多</div>
-        <div className={styles.moreShawdow}></div>
+        <div style={{ textAlign: 'center', cursor: "pointer" }} onClick={onClick}>
+          <div className={styles.more}>查阅更多</div>
+          <div className={styles.moreShawdow}></div>
+        </div>
       </div>
       <div className={styles.detail}>
         <img src={leftTop} alt="" className={styles.leftTop} />
@@ -47,10 +38,11 @@ function Index() {
             户提供3d应用程序的解决方案。
           </div>
           <div>
-            目前拥有三大专利:&nbsp;&nbsp;&nbsp;(1)&nbsp;tuo_visual数据格式&nbsp;&nbsp;&nbsp;(2)&nbsp;基于方向的参数曲面三角化
-            方法、装置、设备及存储介质&nbsp;&nbsp;&nbsp;(3)&nbsp;物体的变形动画的3d特效展展示方法
-            天工图学产品拥有行业领先的3d技术--工业模型解析平台/企业智能制造报价系
-            统开发/工程师笔记本等产品。
+            目前拥有三大专利:&nbsp;&nbsp;&nbsp;(1)&nbsp;<a>tuo_visual数据格式</a>&nbsp;&nbsp;&nbsp;(2)&nbsp;<a>基于方向的参数曲面三角化
+              方法、装置、设备及存储介质</a>&nbsp;&nbsp;&nbsp;(3)&nbsp;<a>物体的变形动画的3d特效展展示方法</a>
+          </div>
+          <div>
+            天工图学产品拥有<span style={{ color: "#5C5C5C", fontWeight: 600 }}>行业领先的3d技术</span>——<span style={{ color: "#054B72", fontWeight: 600 }}>工业模型解析平台/企业智能制造报价系统开发/工程师笔记本等产品。</span>
           </div>
           <div>
             天工图学是被证明了具有高性能和高可靠性的商业开发平台台,在工程设计、可视化
@@ -62,9 +54,14 @@ function Index() {
         <div className={styles.title}>相关视频</div>
         <div className={styles.VideoBox}>
           {
-           videos.map((item) => {
-             return <SomeVideoDetail key={item?.id} data={item?.attributes} />
-           })
+            videos.map((item) => {
+              return <SomeVideoDetail key={item?.id} data={item?.attributes} />
+            })
+          }
+          {
+            videos.map((item) => {
+              return <SomeVideoDetail key={item?.id} data={item?.attributes} />
+            })
           }
         </div>
       </div>

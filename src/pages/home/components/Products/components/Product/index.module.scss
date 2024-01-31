@@ -26,23 +26,24 @@
       position: relative;
       box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
       color: #054b72;
-
+      text-align: left;
       .smallItem {
         height: 100%;
+        margin-left: 39px;
         .title{
           padding-top: 100px;
           font-size: 20px;
           font-weight:600;
-          text-align: center;
         }
         .itemText {
+          padding-top: 26px;
           width: 336px;
           height: 128px;
           position: absolute;
           font-size: 16px;
           font-family: Source Han Sans SC;
           font-weight: 500;
-          @include center();
+          // @include center();
         }
       }
     }
