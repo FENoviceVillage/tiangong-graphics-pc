@@ -13,7 +13,7 @@ function Index(props: Props) {
     <>
       <div className={styles.product} style={{ flexDirection: isVideoleft ? 'row' : 'row-reverse' }}>
         <div className={styles.large}>
-          <VideoWithImg videoSrc={data?.video} imgSrc={data?.image} isClickImgShowVedio />
+          <VideoWithImg videoSrc={data?.video} imgSrc={data?.image} isClickImgShowVideo />
         </div>
         <div className={styles.small}>
           <div className={styles.smallItem}>

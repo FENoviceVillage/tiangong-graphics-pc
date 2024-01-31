@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react"
 import img from '../../../../assets/img/home/播放键.png'
-export default function Index(props: { videoSrc: string, imgSrc: string, hasControl?: boolean, isClickImgShowVedio?: boolean, isSmallVideo?: boolean,btnStyle?:any }) {
-  const { videoSrc, imgSrc, hasControl = true, isClickImgShowVedio = false, isSmallVideo = false,btnStyle = {}, ...resets } = props
+export default function Index(props: { videoSrc: string, imgSrc: string, hasControl?: boolean, isClickImgShowVideo?: boolean, isSmallVideo?: boolean,btnStyle?:any }) {
+  const { videoSrc, imgSrc, hasControl = true, isClickImgShowVideo = false, isSmallVideo = false,btnStyle = {}, ...resets } = props
   const controls = hasControl ? true : undefined
   const ref = useRef<HTMLVideoElement>(null)
-  const [state, setState] = useState(isClickImgShowVedio)
+  const [state, setState] = useState(isClickImgShowVideo)
   const [isPlay,setIsPlay] = useState(false)
   const handelImgClick = () => {
     setState(!state)
@@ -16,8 +16,8 @@ export default function Index(props: { videoSrc: string, imgSrc: string, hasCont
 
   const style = isSmallVideo ? { width: 31, height: 31 } : { width: 75, height: 75 }
   useEffect(() => {
-    if (isClickImgShowVedio !== state) setState(isClickImgShowVedio)
-  }, [isClickImgShowVedio])
+    if (isClickImgShowVideo !== state) setState(isClickImgShowVideo)
+  }, [isClickImgShowVideo])
   return <>
     {
       state ? <div style={{ position: "relative" }}>
