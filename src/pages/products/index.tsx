@@ -52,7 +52,7 @@ function Products() {
     },
   ]
   const { title, video, shortdescription, smallimage } = Data[Number(category) - 1]?.attributes || {}
-  console.log(Data[Number(category) - 1]?.attributes || {}, '12')
+
 
   return (
     <div className={style.content}>
