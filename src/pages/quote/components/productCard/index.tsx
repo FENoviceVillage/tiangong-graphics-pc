@@ -20,12 +20,12 @@ function ProductCard(props: any) {
             <img src={productData.smallimage} alt="" />
             {/* <VideoWithImg imgSrc={productData.smallimage} videoSrc={productData.video} hasControl /> */}
           </div>
-          <div style={{ padding: '0 12px' }}>
+          <div style={{ padding: '0 12px', width: '100%' }}>
             <div className={styles.price}>
-              <div className={styles.btn1}>
+              {/* <div className={styles.btn1}>
                 <img src={magnifierIcon} alt="放大镜图标" />
                 <div className={styles.text}>查看价格</div>
-              </div>
+              </div> */}
               <div className={styles.btn2}>
                 <img src={trialIcon} alt="申请试用图标" />
                 <div className={styles.text}>申请试用</div>
