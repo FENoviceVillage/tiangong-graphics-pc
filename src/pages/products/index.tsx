@@ -52,6 +52,7 @@ function Products() {
     },
   ]
   const { title, video, shortdescription, smallimage } = Data[Number(category) - 1]?.attributes || {}
+  console.log(Data[Number(category) - 1]?.attributes || {}, '12')
 
   return (
     <div className={style.content}>
@@ -105,20 +106,21 @@ function Products() {
       </div>
       <div className={style.parse}>
         <h1>工业3d模型解析平台</h1>
-        <p>
-          通过对工业3d模型进行解析，转化成
-          <a>tuo-visual</a>
-          格式数据和模型整体缩略图。
-
-        </p>
-        <p>
-          企业可以调用平台提供的
-          <span>API接口</span>
-          ，实现在客户端网页上直接浏览3d模型，提供
-        </p>
-        <p>
-          模型尺寸测量、3D标注、特征识别、制造成本分析等功能
-        </p>
+        <div>
+          <p>
+            通过对工业3d模型进行解析，转化成
+            <a>tuo-visual</a>
+            格式数据和模型整体缩略图。
+          </p>
+          <p>
+            企业可以调用平台提供的
+            <span>API接口</span>
+            ，实现在客户端网页上直接浏览3d模型，提供
+          </p>
+          <p>
+            模型尺寸测量、3D标注、特征识别、制造成本分析等功能
+          </p>
+        </div>
       </div>
       <div className={style.palyFree}>
         <div className={style.paidContent}>
