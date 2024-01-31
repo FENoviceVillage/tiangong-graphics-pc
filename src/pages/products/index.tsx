@@ -53,7 +53,6 @@ function Products() {
   ]
   const { title, video, shortdescription, smallimage } = Data[Number(category) - 1]?.attributes || {}
 
-
   return (
     <div className={style.content}>
       <div className={style.topShow}>
@@ -64,7 +63,7 @@ function Products() {
           <button>联系报价</button>
         </div>
         <div className={style.video}>
-          <VideoWithImg imgSrc={smallimage} videoSrc={video} hasControl />
+          <VideoWithImg imgSrc={smallimage} videoSrc={video} hasControl isClickImgShowVideo />
         </div>
         <div className={style.videoDetail}>
           <p>
