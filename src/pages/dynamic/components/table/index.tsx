@@ -31,7 +31,7 @@ function DynamicTable(props: Props) {
   const onPageChange = async (currentPage: number) => {
     const res = await service({
       'pagination[page]': currentPage,
-      'pagination[pageSize]': 4,
+      'pagination[pageSize]': 5,
     })
     setPagination(res.pagination)
     setTableData(res.data)
