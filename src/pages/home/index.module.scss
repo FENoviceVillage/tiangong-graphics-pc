@@ -203,6 +203,9 @@
     }
 
     .content {
+      a{
+        text-decoration: underline;
+      }
       width: 1081px;
       display: flex;
       flex-direction: column;
