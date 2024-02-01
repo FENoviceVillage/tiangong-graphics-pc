@@ -1,6 +1,6 @@
-import { useAppStore } from '@/store'
 import Product from './components/Product'
 import styles from './index.module.scss'
+import { useAppStore } from '@/store'
 
 function Index() {
   const products = useAppStore(state => state.products)

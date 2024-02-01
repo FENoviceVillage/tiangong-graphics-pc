@@ -1,4 +1,3 @@
-import React from 'react'
 import Pushpins from '../../../../assets/img/products/Pushpins.png'
 import style from './index.module.scss'
 

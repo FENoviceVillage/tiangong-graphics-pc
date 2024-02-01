@@ -1,4 +1,3 @@
-import React from 'react'
 import Product from '../product'
 import styles from './index.module.scss'
 import product from '@/assets/img/quote/product.png'
