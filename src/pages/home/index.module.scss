@@ -169,6 +169,23 @@
       justify-content: flex-start;
       gap: 24px;
     }
+    .more {
+      margin-top: 41px;
+      height: 31px;
+      font-size: 31px;
+      font-family: Microsoft YaHei;
+      font-weight: 400;
+      color: #95bbca;
+      line-height: 54px;
+    }
+
+    .moreShawdow {
+      margin-top: 29px;
+      width: 285px;
+      height: 5px;
+      background: #95bbca;
+      box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
+    }
   }
 
   .news {
