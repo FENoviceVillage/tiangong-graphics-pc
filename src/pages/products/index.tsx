@@ -52,6 +52,7 @@ function Products() {
     },
   ]
   const { title, video, shortdescription, smallimage } = Data[Number(category) - 1]?.attributes || {}
+
   /* 滚动效果 */
   const myRef = useRef<any>(0)
   const ScrollRef = () => {
@@ -83,10 +84,10 @@ function Products() {
         </div>
         <div className={style.topLine}>
           <p>在线预览多种格式文件效果</p>
-          <a href="javascript:">tuo visual</a>
-          <a href="javascript:">SolidWorks</a>
-          <a href="javascript:">STP</a>
-          <a href="javascript:">CATIA</a>
+          <span>tuo visual</span>
+          <span>SolidWorks</span>
+          <span>STP</span>
+          <span>CATIA</span>
           <a onClick={ScrollRef}>查看格式清单</a>
         </div>
       </div>

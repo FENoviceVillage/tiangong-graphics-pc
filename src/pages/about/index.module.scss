@@ -6,10 +6,10 @@ a {
   box-sizing: border-box;
   align-items: center;
   .index {
-    height: 927px;
+    height: 502px;
     width: 100%;
     @include flex-rc-sa;
-    background-image: url(https://res.tuocad.com/image/CAX%E5%A4%A9%E5%B7%A5%E5%9B%BE%E5%AD%A6/%E5%8A%A0%E5%85%A5%E6%88%91%E4%BB%AC-%E5%A4%A7%E6%A8%AA%E5%9B%BE.jpg);
+    background-image: url(../../assets/img/about/aboutbc.png);
     background-size: cover;
     .subheading {
       font-size: 22px;
