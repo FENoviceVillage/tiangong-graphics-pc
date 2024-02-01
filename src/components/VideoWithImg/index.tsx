@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import img from '../../../../assets/img/home/播放键.png'
+import img from '@/assets/img/home/播放键.png'
 
 export default function Index(props: { videoSrc: string, imgSrc: string, hasControl?: boolean, isClickImgShowVideo?: boolean, isSmallVideo?: boolean, btnStyle?: any }) {
   const { videoSrc, imgSrc, hasControl = true, isClickImgShowVideo = false, isSmallVideo = false, btnStyle = {}, ...resets } = props
@@ -26,9 +26,9 @@ export default function Index(props: { videoSrc: string, imgSrc: string, hasCont
       {
       state
         ? (
-          <div style={{ position: 'relative', height: '100%' }}>
+          <div style={{ position: 'relative', height: '100%', cursor: 'pointer' }}>
             <img onClick={handelImgClick} src={imgSrc} style={{ width: '100%', height: '100%' }} />
-            <img onClick={handelImgClick} src={img} alt="" style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translateX(-50%) translateY(-50%)', ...style, ...btnStyle }} />
+            <img onClick={handelImgClick} src={img} style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translateX(-50%) translateY(-50%)', ...style, ...btnStyle }} />
           </div>
           )
         : (

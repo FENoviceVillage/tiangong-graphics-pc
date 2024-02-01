@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import rightBottom from '../../assets/img/home/home_pic_logo.png'
 import leftTop from '../../assets/img/home/home_pic_logo2.png'
 import Carousel from './components/Carousel'
@@ -6,13 +7,13 @@ import Products from './components/Products'
 import SomeVideoDetail from './components/SomeVideoDetail'
 import styles from './index.module.scss'
 import { useAppStore } from '@/store'
-import { useNavigate } from 'react-router-dom'
+
 function Index() {
   const videos = useAppStore(state => state.videos)
   const news = useAppStore(state => state.news)
   const nav = useNavigate()
   const onClick = () => {
-    nav("/quote")
+    nav('/quote')
   }
   return (
     <div className={styles.box}>
@@ -23,7 +24,7 @@ function Index() {
         <div className={styles.headerText}>核心产品</div>
         <div className={styles.line}></div>
         <Products />
-        <div style={{ textAlign: 'center', cursor: "pointer" }} onClick={onClick}>
+        <div style={{ textAlign: 'center', cursor: 'pointer' }} onClick={onClick}>
           <div className={styles.more}>查阅更多</div>
           <div className={styles.moreShawdow}></div>
         </div>
@@ -38,11 +39,21 @@ function Index() {
             户提供3d应用程序的解决方案。
           </div>
           <div>
-            目前拥有三大专利:&nbsp;&nbsp;&nbsp;(1)&nbsp;<a>tuo_visual数据格式</a>&nbsp;&nbsp;&nbsp;(2)&nbsp;<a>基于方向的参数曲面三角化
-              方法、装置、设备及存储介质</a>&nbsp;&nbsp;&nbsp;(3)&nbsp;<a>物体的变形动画的3d特效展展示方法</a>
+            目前拥有三大专利:&nbsp;&nbsp;&nbsp;(1)&nbsp;
+            <a>tuo_visual数据格式</a>
+&nbsp;&nbsp;&nbsp;(2)&nbsp;
+            <a>
+              基于方向的参数曲面三角化
+              方法、装置、设备及存储介质
+            </a>
+&nbsp;&nbsp;&nbsp;(3)&nbsp;
+            <a>物体的变形动画的3d特效展展示方法</a>
           </div>
           <div>
-            天工图学产品拥有<span style={{ color: "#5C5C5C", fontWeight: 600 }}>行业领先的3d技术</span>——<span style={{ color: "#054B72", fontWeight: 600 }}>工业模型解析平台/企业智能制造报价系统开发/工程师笔记本等产品。</span>
+            天工图学产品拥有
+            <span style={{ color: '#5C5C5C', fontWeight: 600 }}>行业领先的3d技术</span>
+            ——
+            <span style={{ color: '#054B72', fontWeight: 600 }}>工业模型解析平台/企业智能制造报价系统开发/工程师笔记本等产品。</span>
           </div>
           <div>
             天工图学是被证明了具有高性能和高可靠性的商业开发平台台,在工程设计、可视化
@@ -64,7 +75,7 @@ function Index() {
             })
           }
         </div>
-        <div style={{ textAlign: 'center', cursor: "pointer",display:'flex',alignItems:"center",flexDirection:"column",justifyContent:"center" }} onClick={onClick}>
+        <div style={{ textAlign: 'center', cursor: 'pointer', display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center' }} onClick={onClick}>
           <div className={styles.more}>查阅更多</div>
           <div className={styles.moreShawdow}></div>
         </div>

@@ -8,7 +8,7 @@ import magnifierIcon from '@/assets/img/quote/magnifier.png'
 
 // 导入申请试用图标
 import trialIcon from '@/assets/img/quote/apply.png'
-import VideoWithImg from '@/pages/home/components/VideoWithImg'
+import VideoWithImg from '@/components/VideoWithImg'
 
 function ProductCard(props: any) {
   const productData = props?.Product?.attributes

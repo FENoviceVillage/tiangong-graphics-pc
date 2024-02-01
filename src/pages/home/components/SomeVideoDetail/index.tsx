@@ -1,4 +1,4 @@
-import VideoWithImg from '../VideoWithImg'
+import VideoWithImg from '../../../../components/VideoWithImg'
 import styles from './index.module.scss'
 
 export default function Index(props: { data: any }) {

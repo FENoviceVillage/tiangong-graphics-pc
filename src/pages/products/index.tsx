@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { useRef } from 'react'
-import VideoWithImg from '../home/components/VideoWithImg'
+import VideoWithImg from '../../components/VideoWithImg'
 import FeaturesTitle from './components/featuresTitle'
 import FeaturesCard from './components/featurescard'
 import style from './index.module.scss'

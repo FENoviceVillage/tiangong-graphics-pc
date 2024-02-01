@@ -174,8 +174,6 @@ body {
   }
 }
 
-/* 修改指示点的样式 */
-
 /* 修改当前激活的指示点的样式 */
 .slick-dots li.slick-active {
   /* background: #007bff !important; 设置激活状态的背景色 */

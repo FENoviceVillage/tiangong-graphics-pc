@@ -1,5 +1,5 @@
 import styles from './index.module.scss'
-import VideoWithImg from '@/pages/home/components/VideoWithImg'
+import VideoWithImg from '@/components/VideoWithImg'
 import TimeIcon from '@/assets/img/dynamic/tiangong-time-icon.png'
 
 export interface TableItem {
