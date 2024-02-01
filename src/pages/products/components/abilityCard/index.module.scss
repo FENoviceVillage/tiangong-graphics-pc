@@ -3,7 +3,7 @@
 .card {
   @include flex-cc-c;
   position: relative;
-  width: 318px;
+  width: 307px;
   height: 346px;
   background-color: #b5d3e5;
   box-shadow: 0px 4px 5px 0px rgba(133, 133, 159, 0.35);
@@ -37,8 +37,8 @@
 }
 .card::before {
   content: '';
-  width: 342px;
-  height: 346px;
+  width: 330px;
+  height: 334px;
   background-color: #fff;
   border-radius: 10px;
   position: absolute;

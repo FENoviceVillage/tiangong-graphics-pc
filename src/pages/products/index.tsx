@@ -100,7 +100,6 @@ function Products() {
           }
         </div>
         <FeaturesTitle title="高级功能" />
-        <p>工业3D模型解析平台提供了API接口，实现客户快速的在线浏览3d模型、测量、3D标注、特征识别、制造成本分析等功能</p>
         <div className={style.featureCardN}>
           {
           ability.map((item, index) => <AbilityCard key={index} abilityTitle={item.abilityTitle} abilitySubtitle={item.abilitySubtitle} />)

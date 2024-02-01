@@ -16,7 +16,7 @@
     }
     .video {
       background: #fff;
-      width: 1200px;
+      width: 1112px;
       height: 600px;
       padding: 10px;
       border: 3px #968389 dashed;
@@ -29,7 +29,7 @@
     .videoDetail {
       margin: 40px;
       > p {
-        font-size: 36px;
+        font-size: 32px;
         > span {
           color: #1b4b65;
         }
@@ -38,11 +38,12 @@
     .topLine {
       @include flex-rc-sa;
       height: 150px;
-      width: 1200px;
+      width: 1112px;
       border-top: 2px solid #1b4b65;
       border-bottom: 2px solid #1b4b65;
+      font-size: 17px;
       > p {
-        font-size: 30px;
+        font-size: 26px;
         font-weight: 600;
         margin-right: 60px;
       }
@@ -51,7 +52,6 @@
       }
       > a {
         text-decoration: underline;
-        font-size: 20px;
       }
     }
     .interactButton {
@@ -74,26 +74,27 @@
   }
   .feature {
     @include flex-cc-c;
-    padding: 229px;
+    padding: 80px 220px;
     > p {
-      font-size: 20;
+      font-size: 20px;
       color: #404040;
-      margin-bottom: 75px;
+      margin-bottom: 45px;
     }
     &Card {
       width: 1085px;
       @include flex-rc-sa;
-      margin-bottom: 176px;
+      margin-bottom: 80px;
     }
     &CardN {
-      width: 1285px;
+      margin-top: 20px;
+      width: 1112px;
       @include flex-rc-sa;
     }
   }
   .parse {
     background: #d8ecf4;
     @include flex-cc-c;
-    height: 537px;
+    height: 379px;
     > h1 {
       font-size: 44px;
       font-family: Microsoft YaHei;
@@ -106,9 +107,9 @@
       > p {
         font-size: 28px;
         color: #5c5c5c;
-        letter-spacing: 5px;
+        letter-spacing: 4px;
         > a {
-          text-decoration: dashed;
+          text-decoration: underline;
         }
         > span {
           color: #054b72;
@@ -120,7 +121,7 @@
     }
   }
   .palyFree {
-    height: 1557px;
+    height: 1410px;
     @include flex-cc-c;
     .paidContent {
       @include flex-r;
@@ -166,19 +167,19 @@
       .PaidForms {
         padding: 0 77px;
         background: #ffffff;
-        width: 986px;
+        width: 886px;
         height: 1247px;
         border-radius: 10px;
         overflow: hidden;
         .tab {
-          margin-left: 200px;
+          margin-left: 110px;
           margin-bottom: 50px;
           @include flex-rc-sa;
           &Usually {
             @include flex-cc-c;
             color: #ffffff;
-            width: 297px;
-            height: 110px;
+            width: 270px;
+            height: 100px;
             background: linear-gradient(90deg, #87d9ea 0%, #8ec0ed 100%);
             box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
             border-radius: 0px 0px 10px 10px;
