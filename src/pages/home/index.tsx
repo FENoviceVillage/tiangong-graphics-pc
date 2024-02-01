@@ -64,6 +64,10 @@ function Index() {
             })
           }
         </div>
+        <div style={{ textAlign: 'center', cursor: "pointer",display:'flex',alignItems:"center",flexDirection:"column",justifyContent:"center" }} onClick={onClick}>
+          <div className={styles.more}>查阅更多</div>
+          <div className={styles.moreShawdow}></div>
+        </div>
       </div>
       <div className={styles.news}>
         <div className={styles.title}>
