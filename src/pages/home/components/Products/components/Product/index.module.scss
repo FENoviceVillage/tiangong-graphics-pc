@@ -1,50 +1,63 @@
 .product {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
-    @mixin center() {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+
+  @mixin center() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .large {
+    width: 853px;
+    height: 485px;
+    box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
+
+    .largeItem {
+      position: relative;
+      width: 100%;
+      height: 100%;
     }
-    .large {
-      width: 853px;
-      height: 485px;
-      box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
-      .largeItem {
-        position: relative;
-        width: 100%;
-        height: 100%;
-      }
+  }
+
+  .small {
+    box-sizing: border-box;
+    padding-left: 39px;
+    width: 421px;
+    height: 483px;
+    box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
+    color: #054b72;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      margin-top: 100px;
+      font-size: 20px;
+      font-weight: 600;
     }
 
-    .small {
-      width: 421px;
-      height: 483px;
-      position: relative;
-      box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
-      color: #054b72;
-      text-align: left;
-      .smallItem {
-        height: 100%;
-        margin-left: 39px;
-        .title{
-          padding-top: 100px;
-          font-size: 20px;
-          font-weight:600;
-        }
-        .itemText {
-          padding-top: 26px;
-          width: 336px;
-          height: 128px;
-          position: absolute;
-          font-size: 16px;
-          font-family: Source Han Sans SC;
-          font-weight: 500;
-          // @include center();
-        }
+    .itemText {
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 24px;
+      width: 336px;
+      font-size: 16px;
+      font-family: Source Han Sans SC;
+      font-weight: 500;
+    }
+    .link{
+      a {
+        font-size: 16px;
+        text-decoration: underline;
+        color: #054B72;
       }
     }
   }
+}
