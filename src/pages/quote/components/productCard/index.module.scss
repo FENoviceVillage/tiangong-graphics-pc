@@ -29,13 +29,17 @@
       display: flex;
       justify-content: space-between;
       margin-top: 18px;
-
+      cursor: pointer;
+      &:hover {
+        opacity: 0.85;
+      }
       .text {
         font-size: 12px;
         font-family: Source Han Sans SC;
         font-weight: 400;
         color: #333333;
         line-height: 28px;
+
       }
 
       img {
