@@ -28,7 +28,7 @@ function ProductCard(props: any) {
               </div> */}
               <div className={styles.btn2}>
                 <img src={trialIcon} alt="申请试用图标" />
-                <div className={styles.text}>申请试用</div>
+                <div className={styles.text} >申请试用</div>
               </div>
             </div>
           </div>

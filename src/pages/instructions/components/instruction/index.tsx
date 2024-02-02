@@ -26,8 +26,10 @@ function Instruction(props: Props) {
       <div className={styles.context}>
         <div className={styles.header}>{title}</div>
         <article>
-          <section>{description}</section>
+          {description}
+          {description}
         </article>
+        <p>了解更多</p>
       </div>
     </div>
   )
