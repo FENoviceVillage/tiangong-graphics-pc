@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
-import { includes } from 'lodash'
-import VideoWithImg from '../home/components/VideoWithImg'
+import { useRef } from 'react'
+import VideoWithImg from '../../components/VideoWithImg'
 import FeaturesTitle from './components/featuresTitle'
 import FeaturesCard from './components/featurescard'
 import style from './index.module.scss'
@@ -15,7 +15,7 @@ function Products() {
   const { category } = useParams()
   const appStore = useAppStore()
   const Data = appStore.products
-
+  /* 数据定义 */
   const FeaturesData = [
     {
       midimage: Cloud,
@@ -52,8 +52,12 @@ function Products() {
     },
   ]
   const { title, video, shortdescription, smallimage } = Data[Number(category) - 1]?.attributes || {}
-  console.log(Data[Number(category) - 1]?.attributes || {}, '12')
 
+  /* 滚动效果 */
+  const myRef = useRef<any>(0)
+  const ScrollRef = () => {
+    myRef.current.scrollIntoView({ behavior: 'smooth' })
+  }
   return (
     <div className={style.content}>
       <div className={style.topShow}>
@@ -64,7 +68,7 @@ function Products() {
           <button>联系报价</button>
         </div>
         <div className={style.video}>
-          <VideoWithImg imgSrc={smallimage} videoSrc={video} hasControl />
+          <VideoWithImg imgSrc={smallimage} videoSrc={video} hasControl isClickImgShowVideo />
         </div>
         <div className={style.videoDetail}>
           <p>
@@ -80,11 +84,11 @@ function Products() {
         </div>
         <div className={style.topLine}>
           <p>在线预览多种格式文件效果</p>
-          <a href="">tuo visual</a>
-          <a href="">SolidWorks</a>
-          <a href="">STP</a>
-          <a href="">CATIA</a>
-          <a href="">查看格式清单</a>
+          <span>tuo visual</span>
+          <span>SolidWorks</span>
+          <span>STP</span>
+          <span>CATIA</span>
+          <a onClick={ScrollRef}>查看格式清单</a>
         </div>
       </div>
       <div className={style.feature}>
@@ -96,7 +100,6 @@ function Products() {
           }
         </div>
         <FeaturesTitle title="高级功能" />
-        <p>工业3D模型解析平台提供了API接口，实现客户快速的在线浏览3d模型、测量、3D标注、特征识别、制造成本分析等功能</p>
         <div className={style.featureCardN}>
           {
           ability.map((item, index) => <AbilityCard key={index} abilityTitle={item.abilityTitle} abilitySubtitle={item.abilitySubtitle} />)
@@ -122,7 +125,7 @@ function Products() {
           </p>
         </div>
       </div>
-      <div className={style.palyFree}>
+      <div className={style.palyFree} ref={myRef}>
         <div className={style.paidContent}>
           <div className={style.interact}>
             <div className={style.crowd}>

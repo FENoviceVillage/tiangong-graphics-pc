@@ -1,5 +1,5 @@
 import styles from './index.module.scss'
-import VideoWithImg from '@/pages/home/components/VideoWithImg'
+import VideoWithImg from '@/components/VideoWithImg'
 import TimeIcon from '@/assets/img/dynamic/tiangong-time-icon.png'
 
 export interface TableItem {
@@ -35,7 +35,7 @@ function DynamicTableItem(props: Props) {
        data.video
          ? (
            <div className={styles.itemImg}>
-             <VideoWithImg imgSrc={data.img} videoSrc={data.video} isClickImgShowVideo={true} hasControl />
+             <VideoWithImg imgSrc={data.img} videoSrc={data.video} isClickImgShowVideo hasControl isSmallVideo />
            </div>
            )
          : <img src={data.img} className={styles.itemImg} />

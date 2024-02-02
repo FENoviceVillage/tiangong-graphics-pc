@@ -5,7 +5,10 @@ function Product(props: any) {
 
   return (
     <div className={styles.product}>
-      <div className={styles.title}>{title}</div>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div className={styles.title}>{title}</div>
+        <div style={{ paddingRight: 90, color: '#0CAEDF', cursor: 'pointer', fontSize: 10, textDecoration: 'underline', height: 11 }}>查看详情</div>
+      </div>
       <div className={styles.smallTitle}>{shortdescription}</div>
       <div>标签</div>
       <div className={styles.nodes}>

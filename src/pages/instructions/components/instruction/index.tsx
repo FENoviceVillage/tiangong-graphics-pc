@@ -1,5 +1,5 @@
 import styles from './index.module.scss'
-import VideoWithImg from '@/pages/home/components/VideoWithImg'
+import VideoWithImg from '@/components/VideoWithImg'
 
 interface Props {
   isFirst?: boolean
@@ -26,8 +26,10 @@ function Instruction(props: Props) {
       <div className={styles.context}>
         <div className={styles.header}>{title}</div>
         <article>
-          <section>{description}</section>
+          {description}
+          {description}
         </article>
+        <p>了解更多</p>
       </div>
     </div>
   )

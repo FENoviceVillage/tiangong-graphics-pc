@@ -2,21 +2,25 @@
 @import '../../../../assets/styles/mixins.scss';
 .features {
   @include flex-cc-c;
+  position: relative;
+  top: 0;
+  margin-bottom: 40px;
   &Shading {
     width: 194px;
     height: 150px;
   }
   h2 {
-    font-size: 67px;
+    text-wrap: nowrap;
+    font-size: 64px;
     color: #397393;
-    position: relative;
-    top: -70px;
+    position: absolute;
+    top: 50px;
+    // top: -100px;
   }
-  &Symbol {
-    width: 78px;
-    height: 16px;
-    position: relative;
-    top: -54px;
-    margin-bottom: 24px;
-  }
+  // &Symbol {
+  //   width: 78px;
+  //   height: 16px;
+  //   position: relative;
+  //   top: -54px;
+  // }
 }

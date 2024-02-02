@@ -17,7 +17,7 @@
     color: #054b72;
     background-color: #fff;
     .time {
-      display:inline-block;
+      display: inline-block;
       text-align: justify;
       padding-top: 55px;
       margin-bottom: 1px;
@@ -44,6 +44,8 @@
       margin-bottom: 30px;
       border-top: solid 1px;
       border-bottom: solid 1px;
+      cursor: pointer;
+
       .flexbox {
         padding-top: 12px;
         padding-bottom: 12px;
@@ -64,5 +66,5 @@
 }
 
 .transform {
-  transform: translateY(-46px);
+  transform: translateY(-41px);
 }

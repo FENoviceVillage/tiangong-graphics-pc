@@ -1,4 +1,3 @@
-import React from 'react'
 import Shading from '../../../../assets/img/products/RShading.png'
 import Symbol from '../../../../assets/img/products/symbol.png'
 import style from './index.module.scss'
@@ -12,7 +11,7 @@ function FeaturesTitle(props: props) {
     <div className={style.features}>
       <img src={Shading} alt="标志" className={style.featuresShading} />
       <h2>{title}</h2>
-      <img src={Symbol} alt="符号" className={style.featuresSymbol} />
+      {/* <img src={Symbol} alt="符号" className={style.featuresSymbol} /> */}
     </div>
   )
 }

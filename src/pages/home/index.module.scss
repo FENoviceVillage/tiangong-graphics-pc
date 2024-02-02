@@ -23,7 +23,7 @@
 
   .productBox {
     width: 100%;
-    height: 2009px;
+    padding: 80px 0;
     background-color: #d3eaf4;
     background-size: 100% 100%;
     display: flex;
@@ -32,22 +32,25 @@
     align-items: center;
 
     .header {
-      height: 149px;
-      width: 193px;
-      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 133.1px;
+
+      margin-bottom: 30px;
       background: url(../../assets/img/home/home_ic_logo.png) no-repeat;
-      background-size: 100% 100%;
+      background-size: 172.4px 100%;
+      background-position: center;
     }
 
     .headerText {
+      margin-top: 40px;
       width: 270px;
-      height: 49px;
-      font-size: 67px;
-      margin-top: -18px;
-      font-family: PangMenZhengDao;
+      font-size: 60px;
       font-weight: 400;
       color: #397393;
-      line-height: 28px;
+      line-height: 25px;
+      text-align: center;
       text-shadow: 0px 4px 5px rgba(133, 133, 159, 0.35);
     }
 
@@ -56,29 +59,21 @@
       width: 77px;
       margin-top: 17px;
       margin-bottom: 62px;
-      background: url(../../assets/img/home/home_ic_line.png) no-repeat;
       background-size: 100% 100%;
     }
-    // .footerVideo {
-    //   width: 1280px;
-    //   height: 485px;
-    //   @include img(url(../../assets/img/home/home_card_video_big.png));
-
 
     .more {
-      margin-top: 41px;
-      height: 31px;
-      font-size: 31px;
+      height: 82px;
+      font-size: 28px;
       font-family: Microsoft YaHei;
       font-weight: 400;
       color: #95bbca;
-      line-height: 54px;
+      line-height: 82px;
     }
 
     .moreShawdow {
-      margin-top: 29px;
-      width: 285px;
-      height: 5px;
+      width: 255px;
+      height: 4px;
       background: #95bbca;
       box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
     }
@@ -90,9 +85,10 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding: 80px 0;
     position: relative;
-    height: 700px;
-    background: #d8ecf4;
+
+    background: #c6e0eb;
     text-align: center;
 
     .leftTop {
@@ -121,7 +117,7 @@
     }
 
     .content {
-      a{
+      a {
         text-decoration: underline;
       }
       width: 1081px;
@@ -135,21 +131,20 @@
       font-weight: 400;
       color: #5c5c5c;
       line-height: 45px;
-      a{
-        color: #054B72;
+      a {
+        color: #054b72;
       }
     }
   }
 
   .someVideo {
     width: 100%;
-    height: 910px;
+    padding: 80px 0;
     background: #e3f6fe;
     text-align: center;
 
     .title {
-      padding-top: 138px;
-      padding-bottom: 107px;
+      margin-bottom: 40px;
       width: 100%;
       height: 57px;
       font-size: 60px;
@@ -167,22 +162,20 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: flex-start;
-      gap: 24px;
+      gap: 15px;
     }
     .more {
-      margin-top: 41px;
-      height: 31px;
-      font-size: 31px;
+      height: 40px;
+      font-size: 14px;
       font-family: Microsoft YaHei;
       font-weight: 400;
       color: #95bbca;
-      line-height: 54px;
+      line-height: 40px;
     }
 
     .moreShawdow {
-      margin-top: 29px;
-      width: 285px;
-      height: 5px;
+      width: 128px;
+      height: 2px;
       background: #95bbca;
       box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
     }
@@ -190,13 +183,12 @@
 
   .news {
     width: 100%;
-    height: 1082px;
-    // @include img(url('././../../assets//img/home/news.png'));
+    padding: 80px 0;
     text-align: center;
-    background-color: #D3EAF4;
+    background-color: #d3eaf4;
     .title {
-      padding-top: 138px;
       height: 57px;
+      margin-bottom: 86px;
       font-size: 60px;
       font-family: Source Han Sans SC;
       font-weight: 500;
@@ -209,8 +201,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 160px;
-      margin-bottom: 60px;
       box-sizing: border-box;
     }
 
@@ -218,112 +208,11 @@
       all: unset;
       width: 160px;
       height: 47px;
+      margin-top: 71px;
       font-size: 16px;
       background: #95bbca;
       border-radius: 5px;
       color: #ffffff;
     }
   }
-
-  // .footer {
-  //   height: 594px;
-  //   background: #e3f6fe;
-
-  //   .title {
-  //     padding-top: 75px;
-  //     text-align: center;
-  //     height: 24px;
-  //     font-size: 24px;
-  //     font-family: Source Han Sans SC;
-  //     font-weight: 500;
-  //     color: #000000;
-  //     line-height: 28px;
-  //   }
-
-  //   .titleBar {
-  //     text-align: center;
-  //     width: 100%;
-  //     padding-bottom: 44px;
-
-  //     .bar {
-  //       display: inline-block;
-  //       width: 96px;
-  //       height: 2px;
-  //       background: #c1d9e7;
-  //       box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
-  //     }
-  //   }
-
-  //   /* 容器样式 */
-  //   .form-container {
-  //     display: grid;
-  //     grid-template-columns: repeat(2, 1fr);
-  //     /* 两列等宽 */
-  //     grid-gap: 28px;
-  //     /* 格子间隙 */
-  //     width: 736px;
-  //     /* 最大宽度，根据需要调整 */
-  //     margin: 0 auto;
-  //     /* 水平居中 */
-  //     padding: 8px;
-  //   }
-
-  //   /* 输入框样式 */
-  //   .form-container input,
-  //   textarea {
-  //     all: unset;
-  //     /* 清除默认样式 */
-  //     padding: 8px;
-  //     /* 内边距 */
-  //     background-color: #95bbca;
-  //     box-sizing: border-box;
-  //     box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
-  //     /* 盒模型 */
-  //   }
-
-  //   /* 按钮样式 */
-  //   .form-container button {
-  //     all: unset;
-  //     /* 清除默认样式 */
-  //     width: 128px;
-  //     height: 38px;
-  //     font-size: 14px;
-  //     box-shadow: 0px 6px 5px 0px rgba(133, 133, 159, 0.35);
-  //     /* 内边距 */
-  //     background-color: #95bbca;
-  //     text-align: center;
-  //     color: #ffffff;
-  //     /* 文本居中 */
-  //     cursor: pointer;
-  //   }
-
-  //   @mixin full() {
-  //     grid-column: 1 / -1;
-  //   }
-
-  //   /* 单独设置第三行的输入框占满整行 */
-  //   .form-container .full-row {
-  //     @include full();
-  //     height: 99px;
-  //   }
-
-  //   .form-container .footerText {
-  //     @include full();
-  //     padding: 0;
-  //     margin-top: -4px;
-  //     margin-bottom: 16px;
-  //     height: 11px;
-  //     font-size: 11px;
-  //     font-family: Source Han Sans SC;
-  //     font-weight: 500;
-  //     color: #5f5f5f;
-  //   }
-
-  //   /* 占位符样式 */
-  //   .form-container input::placeholder,
-  //   textarea::placeholder {
-  //     color: #ffffff;
-  //     font-size: 14px;
-  //   }
-  // }
 }

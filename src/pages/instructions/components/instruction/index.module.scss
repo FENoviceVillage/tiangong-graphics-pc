@@ -76,7 +76,25 @@
       font-family: Source Han Sans SC;
       font-weight: 400;
       color: #513f72;
-      line-height: 15px;
+      line-height: 1.5;
+      width: 220px;
+      height: 92px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 7; /* 可以显示的行数，超出部分用...表示*/
+      -webkit-box-orient: vertical;
+    }
+    p {
+      padding-right: 90px;
+      cursor: pointer;
+      color: #0caedf;
+      font-size: 10px;
+      text-decoration: underline;
+      height: 11px;
+      text-align: center;
+      padding-top: 20px;
+      width: 110%;
     }
   }
 }

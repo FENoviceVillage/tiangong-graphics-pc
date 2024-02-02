@@ -1,5 +1,4 @@
 .box {
-  text-align: center;
   .top {
     width: 280px;
     height: 158px;
@@ -14,12 +13,11 @@
   }
 
   .bottom {
-    width: 242px;
-    height: 33px;
+    text-align: center;
+    width: 276px;
     font-size: 12px;
     font-family: Source Han Sans SC;
     font-weight: 500;
     color: #717171;
-    line-height: 20px;
   }
 }
