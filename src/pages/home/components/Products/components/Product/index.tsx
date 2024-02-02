@@ -4,10 +4,11 @@ import styles from './index.module.scss'
 interface Props {
   isVideoleft?: boolean
   data: Record<string, any> | any
+  index?: number
 }
 
 function Index(props: Props) {
-  const { isVideoleft = true, data = {} } = props
+  const { isVideoleft = true, data = {},index } = props
 
   return (
     <>
@@ -16,14 +17,15 @@ function Index(props: Props) {
           <VideoWithImg videoSrc={data?.video} imgSrc={data?.image} isClickImgShowVideo />
         </div>
         <div className={styles.small}>
-          <div className={styles.smallItem}>
             <div className={styles.title}>
               {data?.title}
             </div>
             <div className={styles.itemText}>
               {data?.description}
             </div>
-          </div>
+            <div className={styles.link}>
+            <a href={`/products/${index}`}>更多内容</a>
+            </div>
         </div>
       </div>
     </>
