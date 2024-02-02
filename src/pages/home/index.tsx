@@ -71,7 +71,7 @@ function Index() {
             })
           }
         </div>
-        <div style={{ textAlign: 'center', cursor: 'pointer', display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center' }} onClick={onClick}>
+        <div style={{ textAlign: 'center', cursor: 'pointer', display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center' }} onClick={() => navigate('/dynamic/#video')}>
           <div className={styles.more}>查阅更多</div>
           <div className={styles.moreShawdow}></div>
         </div>
@@ -87,7 +87,7 @@ function Index() {
             })
           }
         </div>
-        <button>查看更多</button>
+        <button onClick={() => navigate('/dynamic/#news')}>查看更多</button>
       </div>
     </div>
   )

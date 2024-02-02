@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ContactUs from '../../components/contactUs/index'
 import styles from './index.module.scss'
 import ProductCardList from './components/productCardList'
@@ -6,6 +6,9 @@ import RelatedProducts from './components/relatedProducts'
 import { Top } from './components/top'
 
 export const Quote: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className={styles.layout}>
       <div className={styles.center}>

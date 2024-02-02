@@ -13,12 +13,11 @@ interface TableData {
 interface Props {
   title: string
   service: (params: RequestParams) => Promise<TableData>
-
+  href?: string
 }
 
 function DynamicTable(props: Props) {
-  const { title, service } = props
-
+  const { title, service, href } = props
   const [pagination, setPagination] = useState<Pagination>({
     page: 0,
     pageCount: 0,
@@ -37,14 +36,28 @@ function DynamicTable(props: Props) {
     setTableData(res.data)
   }
 
+  const scrollToHerf = () => {
+    const hash = window.location.hash
+    if (!hash)
+      return
+    const elm = document.getElementById(hash)
+    if (!elm)
+      return
+    elm.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
   useEffect(() => {
     onPageChange(1)
+    window.scrollTo(0, 0)
+    setTimeout(() => {
+      scrollToHerf()
+    }, 200)
   }, [])
 
   return (
     <div className={styles.table}>
       <div className={styles.tableHeader}>
-        <div className={styles.tableHeaderTitle}>{title}</div>
+        <div className={styles.tableHeaderTitle} id={href || ''}>{title}</div>
         <div className={styles.tableHeaderDecoration}></div>
       </div>
       <div className={styles.tableBody}>
