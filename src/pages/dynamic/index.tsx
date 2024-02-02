@@ -43,8 +43,8 @@ function Dynamic() {
       </div>
       <div className={styles.body}>
         <div className={styles.bodyMain}>
-          <DynamicTable title="相关视频" service={getVideosInfo}></DynamicTable>
-          <DynamicTable title="新闻资讯" service={getNewsInfo}></DynamicTable>
+          <DynamicTable title="相关视频" service={getVideosInfo} href="#video"></DynamicTable>
+          <DynamicTable title="新闻资讯" service={getNewsInfo} href="#news"></DynamicTable>
         </div>
         <div className={styles.bodyAside}>
           <DynamicCategory></DynamicCategory>
