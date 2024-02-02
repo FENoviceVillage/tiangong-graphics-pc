@@ -31,7 +31,18 @@
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
-      margin-bottom: 27px;
+      // margin-bottom: 27px;
+    }
+
+    &Link {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      a {
+        font-size: 14px;
+        text-decoration: underline;
+        color: #054b72;
+      }
     }
 
     &Time {

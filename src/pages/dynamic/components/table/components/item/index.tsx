@@ -25,8 +25,10 @@ function DynamicTableItem(props: Props) {
         <div className={styles.itemContentArticle}>
           {data.desc}
         </div>
+        <div className={styles.itemContentLink}>
+          <a>更多内容</a>
+        </div>
         <div className={styles.itemContentTime}>
-
           <img src={TimeIcon} className={styles.itemContentTimeIcon} />
           <div className={styles.itemContentTimeDesc}>{data.time}</div>
         </div>
